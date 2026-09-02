@@ -2,7 +2,7 @@
 
 _This project is to be done in teams of 2._
 
-**NAME OF BOTH COLLABORATOR(S) HERE**
+**NAME OF BOTH COLLABORATOR(S) HERE:** Yuxuan Wang and Hanle Gu
 
 **THE MASTERWORK YOU DREW FROM THE HAT:**
 
