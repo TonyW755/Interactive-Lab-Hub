@@ -81,7 +81,7 @@ page.
 **Describe your masterwork here, in your own words. What is the core interaction
 someone would recognize it by?**
 
-The Clavilux invented by Thomas Wilfred in the early 20th century is a performable instrument that generates lumia, which is understood as a visual light art at the time. The light projected onto the screen using a range of instruments including glass discs, lenses, motorized reflectors to generate shifting shapes and colours, hence resonating with the latin form of Clavilux, which means “light played by key”【wiki】(https://en.wikipedia.org/wiki/Clavilux) 
+The Clavilux invented by Thomas Wilfred in the early 20th century is a performable instrument that generates lumia, which is understood as a visual light art at the time. The light projected onto the screen using a range of instruments including glass discs, lenses, motorized reflectors to generate shifting shapes and colours, hence resonating with the latin form of Clavilux, which means “light played by key”[wiki](https://en.wikipedia.org/wiki/Clavilux) 
 
 What inputs are available to the user? What responses does the work give?
 While the original model of Clavilux doesn’t allow interaction between viewers and the installation, as viewers may only watch pre-determined patterns of lumia, later versions of the installation allows interaction between user and the device.
