@@ -78,30 +78,32 @@ page.
 # The Report
 
 ## Part 0. Know Your Master
-
-Before you prototype anything, get intimately acquainted with the piece you
-drew. Do real research. You are looking less for trivia than for the *shape of
-the interaction*:
-
-- What inputs are available to the user? What responses does the work give?
-- Who is present, and how does the piece color the relationships between them?
-- What is the piece famous for? What are its strengths and its weaknesses?
-
-  Sometimes the details of how the interaction worked are lost in history. Try filling it in with your imagination!
-
 **Describe your masterwork here, in your own words. What is the core interaction
 someone would recognize it by?**
 
+The Clavilux invented by Thomas Wilfred in the early 20th century is a performable instrument that generates lumia, which is understood as a visual light art at the time. The light projected onto the screen using a range of instruments including glass discs, lenses, motorized reflectors to generate shifting shapes and colours, hence resonating with the latin form of Clavilux, which means “light played by key”【wiki】(https://en.wikipedia.org/wiki/Clavilux) 
+
+What inputs are available to the user? What responses does the work give?
+While the original model of Clavilux doesn’t allow interaction between viewers and the installation, as viewers may only watch pre-determined patterns of lumia, later versions of the installation allows interaction between user and the device.
+
+Who is present, and how does the piece color the relationships between them?
+Only the device and the viewer(generally individuals or few people depending on the scale of the device), will be present at the scene. The relationship between installation and viewer depends on the possibility of interaction in between, since some models may not be interacted with. 
+
+What is the piece famous for? What are its strengths and its weaknesses?
+Clavilux, an instrumental way of displaying lumia, and its inventor Thomas Wilfred, demonstrate an avant garde style art form that directly influences population’s understanding of what art can be and how they may be carried out. 
+
 ## Part A. Plan
 
-For your masterwork, reconstruct the interaction as a scene:
+In these performances, light was the medium of expression. Therefore, it led us to consider how light can communicate intention and affect emotions. Our device explores this idea through an interactive process that reads the user’s facial expressions and physical actions to generate different themes of shapes and colours with the aim of influencing their mood. The device also changes colour based on weather and time, providing users with clear visual interpretation about their surroundings. In our design the Light serves two main purposes; it creates a congenial atmosphere to influence emotion and acts as an effective medium of communication. 
 
-- **Setting:** Where and when does this interaction happen? (a jungle, a kitchen,
-  a spaceship corridor, a nightclub, a harbor at night)
-- **Players:** Who is involved? Who else is present? Think through everyone in
-  the setting, not just the primary user.
-- **Activity:** What is happening between the players and the light?
-- **Goals:** What is each player trying to do?
+_Setting:_ The interaction is assumed to take place inside a studio apartment or a One-person household where the occupant is trying to relax from work (sitting on a sofa or laying in bed). The lighting display is placed nearby and alters its brightness, colour and shape to generate a cosy atmosphere.
+
+_Players:_ The main players in this scenario are the occupant and the lighting device. Although friends and family may occasionally visit, the general interaction process remains the same. When multiple faces are recognised the device implement changes based on an algorithm that identifies different scenarios (e.g party, family dinning and late night chat)
+
+_Activity:_ The device reads the user’s facial expressions and physical actions to generate different themes of lighting with the aim of influencing their mood. The device also changes colour based on weather and time, providing users with clear visual interpretation about their surroundings.
+
+_Goals:_ The device generates a congenial atmosphere providing the occupant with a sense of belonging and comfort. The device also acts as an effective medium of communication generating to provide consumers with clear visual interpretation about their surroundings.
+
 
 **Describe your setting, players, activity, and goals here.**
 
@@ -112,7 +114,11 @@ and the people around it. If you're new to storyboarding, read
 
 **Include pictures of your storyboards here.**
 
-Use the storyboards to decide what interaction to prototype.
+<img width="1483" height="740" alt="image" src="https://github.com/user-attachments/assets/05145cc3-f86e-47c9-9b68-32c224975d08" />
+<img width="684" height="542" alt="Screenshot 2026-08-30 at 23 07 05" src="https://github.com/user-attachments/assets/84732f82-19fb-4041-bf0b-97a8b5a2c798" />
+<img width="722" height="531" alt="Screenshot 2026-08-30 at 23 07 24" src="https://github.com/user-attachments/assets/0b6bea8f-15fd-4358-9295-8f44dbeee412" />
+<img width="702" height="576" alt="Screenshot 2026-08-30 at 23 07 40" src="https://github.com/user-attachments/assets/3d43628a-b2b1-4ae3-bd12-c501fc06b0d6" />
+
 
 **Summarize the feedback you got here.**
 
