@@ -208,6 +208,9 @@ guess the masterwork and the goals of the characters, and ask about anything tha
 wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
+Group 1 [Pepper's Ghost by Xie Li](https://github.com/mc3223/Peppers-Ghost/blob/Fall2026/Lab%201/README.md)
+Group 2
+
 **Summarize the feedback you got from your partners here.**
 
 ## Remix, Update, or Critique the Master
