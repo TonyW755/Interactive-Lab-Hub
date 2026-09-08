@@ -240,8 +240,12 @@ your response engages with what your master was really doing.
 **Document everything here — especially the storyboard and video. Photos of the
 prototype are great too.**
 
-**Updated Version**
-For our redesign, we want to bring the Clavilux into the interior of a car. Instead of a panoramic sunroof, the ceiling of the vehicle becomes a surface for displaying moving light, colours and abstract patterns inspired by lumia. The system is mainly designed for passengers during long road trips, where the changing light show can make the journey feel less repetitive and create different atmospheres inside the car. The patterns could respond to music, passenger movement, time of day, or the surrounding environment, allowing passengers to influence the light show rather than simply watching it. Compared with a panoramic glass roof, this concept could also provide a more flexible experience without relying on a large area of glass that can increase heat inside the vehicle. Most importantly, it keeps the original idea of Clavilux—using light as a form of expression—but places it in a completely different everyday setting.
+**Updated Version:**
+For the updated design, we decided to combine the Clavilux with the interior of a car. Firstly we decided to replace the panoramic sunroof with a surface that displays moving light, colours and abstract patterns inspired by lumia. The system is mainly designed for passengers during long road trips, where the changing light show can make the journey feel less repetitive and create different atmospheres inside the car. Similar to our original design, the patterns alternates corresponding to the music, physical movement, time of day and the surrounding environment.This allows passengers to influence and interact with the light show instead of watching it. Compared with a panoramic glass roof, this concept provides a more flexible experience without relying on a large area of glass that increases heat inside the vehicle and . Most importantly, it keeps the original idea of Clavilux—using light as a form of expression—but places it in a completely different everyday setting.
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e4bcb060-58d7-4d63-902c-c78787c9457c" />
+Picture generated Using Chatgpt and shows the prototype model.
+
 
 
 
