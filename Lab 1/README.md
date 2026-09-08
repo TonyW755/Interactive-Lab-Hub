@@ -251,6 +251,11 @@ _Activity:_ The device reads the user’s physical actions and music  to generat
 
 _Goals:_ The device generates a congenial atmosphere providing the passengers with a sense of novelty and comfort. The device also acts as an effective medium of communication generating to provide consumers with clear visual interpretation about their surroundings.
 
+**Story-Board**
+
+<img width="1116" height="1020" alt="image" src="https://github.com/user-attachments/assets/86d20d0c-3f33-4959-b0fe-a786d5402d65" />
+
+**Include sketches of what the device might look like:**
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e4bcb060-58d7-4d63-902c-c78787c9457c" />
 The above picture generated using Chatgpt as a demo to show a developed prototype.
