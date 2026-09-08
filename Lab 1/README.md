@@ -258,7 +258,8 @@ _Goals:_ The device generates a congenial atmosphere providing the passengers wi
 **Include sketches of what the device might look like:**
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e4bcb060-58d7-4d63-902c-c78787c9457c" />
-The above picture generated using Chatgpt as a demo to show a developed prototype.
+
+The above picture generated using Chatgpt.ai as a demo to show a what a developed prototype might look like.
 
 
 
