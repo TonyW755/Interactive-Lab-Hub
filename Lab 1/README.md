@@ -241,10 +241,19 @@ your response engages with what your master was really doing.
 prototype are great too.**
 
 **Updated Version:**
-For the updated design, we decided to combine the Clavilux with the interior of a car. Firstly we decided to replace the panoramic sunroof with a surface that displays moving light, colours and abstract patterns inspired by lumia. The system is mainly designed for passengers during long road trips, where the changing light show can make the journey feel less repetitive and create different atmospheres inside the car. Similar to our original design, the patterns alternates corresponding to the music, physical movement, time of day and the surrounding environment.This allows passengers to influence and interact with the light show instead of watching it. Compared with a panoramic glass roof, this concept provides a more flexible experience without relying on a large area of glass that increases heat inside the vehicle and . Most importantly, it keeps the original idea of Clavilux—using light as a form of expression—but places it in a completely different everyday setting.
+For the updated design, we decided to combine the Clavilux with the interior of a car. Firstly we decided to replace the panoramic sunroof with a surface that displays moving light, colours and abstract patterns inspired by lumia. The system is mainly designed for passengers during long road trips, where the changing light show can make the journey feel less repetitive and create different atmospheres inside the car. Similar to our original design, the patterns alternates corresponding to the music, physical movement, time of day and the surrounding environment.This allows passengers to influence and interact with the light show instead of watching it. Compared with a panoramic glass roof, this concept provides a more flexible experience without relying on large areas of glass that increases inner temperature. 
+
+_Setting:_ The interaction is assumed to take place inside a SUV and is for passengers during long road trips to improve their travel experience. 
+
+_Players:_ The main players in this case are the passengers and the lighting device. The device is not designed to respond to the driver due to safety reasons as this could distract them causing potential safety risks. However, with the implementation of L4 autonomous vehicles, this setting could change. 
+
+_Activity:_ The device reads the user’s physical actions and music  to generate different themes of lighting with the aim of influencing their mood. The device also changes colour based on weather and time providing users with clear visual interpretation about their surroundings.
+
+_Goals:_ The device generates a congenial atmosphere providing the passengers with a sense of novelty and comfort. The device also acts as an effective medium of communication generating to provide consumers with clear visual interpretation about their surroundings.
+
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e4bcb060-58d7-4d63-902c-c78787c9457c" />
-Picture generated Using Chatgpt and shows the prototype model.
+The above picture generated using Chatgpt as a demo to show a developed prototype.
 
 
 
