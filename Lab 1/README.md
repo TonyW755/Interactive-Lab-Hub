@@ -208,10 +208,16 @@ guess the masterwork and the goals of the characters, and ask about anything tha
 wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
+
 Group 1 [Pepper's Ghost by Xie Li](https://github.com/mc3223/Peppers-Ghost/blob/Fall2026/Lab%201/README.md)
-Group 2
+
+Group 2 [GLOWORM by Hong Yuan Cao](https://github.com/hongyuanc/Interactive-Lab-Hub)
+
+Group 3 [Philips Hue by Shenye Wang](https://github.com/sw2486-hub/Interactive-Lab-Hub/blob/Fall2026/Lab%201/README.md)
 
 **Summarize the feedback you got from your partners here.**
+
+The feedback we received was generally positive about the connection between our idea and the original art work. People liked our idea on how use of light, colour, and movement could influence emotions and communicate intention. However, some suggested that we could do more research into how different colours, movements and shape could create different experiences as it wasn't clearly expressed in the story board. The design uses both facial expressions and physical movement was seen as an interesting way to convert the Clavilux into an interactive device. However, the device contains multiple interactive features including facial expressions, weather, time, and multiple-user scenarios making the system unnecessarily complicated. Therefore, moving forwards we were advised to focus on a few key interactions and develop them more clearly and sophisticated. It was also suggested that we maintain the abstract and movement patterns of the original Clavilux so that our design differentiates from a normal smart lighting system.
 
 ## Remix, Update, or Critique the Master
 
