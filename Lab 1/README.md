@@ -240,7 +240,8 @@ your response engages with what your master was really doing.
 **Document everything here — especially the storyboard and video. Photos of the
 prototype are great too.**
 
----
+**Updated Version**
+For our redesign, we want to bring the Clavilux into the interior of a car. Instead of a panoramic sunroof, the ceiling of the vehicle becomes a surface for displaying moving light, colours and abstract patterns inspired by lumia. The system is mainly designed for passengers during long road trips, where the changing light show can make the journey feel less repetitive and create different atmospheres inside the car. The patterns could respond to music, passenger movement, time of day, or the surrounding environment, allowing passengers to influence the light show rather than simply watching it. Compared with a panoramic glass roof, this concept could also provide a more flexible experience without relying on a large area of glass that can increase heat inside the vehicle. Most importantly, it keeps the original idea of Clavilux—using light as a form of expression—but places it in a completely different everyday setting.
 
 
 
