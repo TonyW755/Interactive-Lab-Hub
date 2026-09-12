@@ -158,10 +158,15 @@ You can look in `image.py` for an example of how to display an image on the scre
 
 \*\*\***Include a picture of your own Raspberry Pi displaying the piscreen.service with your unique MAC address. Additionally, please provide another picture showing the successful completion of the screen test.**\*\*\*
 
+<img width="3024" height="4032" alt="IMG_1156" src="https://github.com/user-attachments/assets/3045122e-bc4a-4499-9e74-3dfd267cccb2" />
+
 
 ## Part D. 
 ### Set up the Display Clock Demo
 Work on `screen_clock.py`, try to show the time by filling in the while loop (at the bottom of the script where we noted "TODO" for you). You can use the code in `cli_clock.py` and `stats.py` to figure this out.
+
+<img width="3024" height="4032" alt="IMG_1157" src="https://github.com/user-attachments/assets/3f513b4e-c368-42f9-99e6-2bfdd14a04ca" />
+
 
 ### How to Edit Scripts on Pi
 Option 1. One of the ways for you to edit scripts on Pi through terminal is using [`nano`](https://linuxize.com/post/how-to-use-nano-text-editor/) command. You can go into the `screen_clock.py` by typing the follow command line:
