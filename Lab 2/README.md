@@ -158,7 +158,7 @@ You can look in `image.py` for an example of how to display an image on the scre
 
 \*\*\***Include a picture of your own Raspberry Pi displaying the piscreen.service with your unique MAC address. Additionally, please provide another picture showing the successful completion of the screen test.**\*\*\*
 
-<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/bc4f90ee-a4b6-4f75-9170-05a5234c7a9d" />
+<img height="200" alt="image" src="https://github.com/user-attachments/assets/bc4f90ee-a4b6-4f75-9170-05a5234c7a9d" />
 
 https://github.com/user-attachments/assets/d14f6f42-39e6-4cde-a9e7-b8d88d43600f
 
@@ -168,7 +168,7 @@ https://github.com/user-attachments/assets/d14f6f42-39e6-4cde-a9e7-b8d88d43600f
 ### Set up the Display Clock Demo
 Work on `screen_clock.py`, try to show the time by filling in the while loop (at the bottom of the script where we noted "TODO" for you). You can use the code in `cli_clock.py` and `stats.py` to figure this out.
 
-<img width="300" height="200" alt="IMG_1157" src="https://github.com/user-attachments/assets/3f513b4e-c368-42f9-99e6-2bfdd14a04ca" />
+<img height="200" alt="IMG_1157" src="https://github.com/user-attachments/assets/3f513b4e-c368-42f9-99e6-2bfdd14a04ca" />
 
 
 ### How to Edit Scripts on Pi
