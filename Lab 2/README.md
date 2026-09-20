@@ -244,7 +244,7 @@ Bowei Huang and Shengye Wang’s idea is like an even further exploration of Fei
 
 Start small, pick just one element of your overall idea, just to show you have a handle on the code and components.
 
-The First element we modified was color. Based on our initial idea we decided to start simple by altering the background colour based on time. During the day, the background is blue and during the night the background is black. The coding of our initial Piclock in attached as pi_initial_clock.py:.
+The First element we modified was color. Based on our initial idea we decided to start simple by altering the background colour based on time. During the day, the background is blue and during the night the background is black. The coding of our initial Piclock in attached as [pi_initial_clock.py](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%202/pi_initial_clock.py).
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
