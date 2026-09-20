@@ -247,6 +247,7 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
+The coding was supported by chatgpt and is stored on the Lab 2 Github repo as pi_clock.py
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
