@@ -225,6 +225,7 @@ Bowei Huang(bh654), Shengye Wang https://github.com/bh654-dev/Interactive-Lab-Hu
 1. Pick up remaining parts for kit on Wednesday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
 
 2. Look at and give feedback on the Part E. for at least 3 other people in the class and get 3 people to comment on your Part E!)
+
 ****Put the feedback for your ideas here：**
 
 Yangchen Jin’s idea also took a focus on clear and intuitive indication of time with just a glimpse. Using a very simple but clever combination of size, binary state and order, the envisioned plan did a really good job on telling the time to anyone without requirement of language or understanding of reading gauges. I do think it will be more interactive and pleasing if additional aesthetics elements may be added such as colors and other interactive elements.
