@@ -212,6 +212,12 @@ The landscape provides a visual sense of where we are within the daily cycle, wh
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
 
+Yangchen Jin https://github.com/MortalJin/Interactive-Lab-Hub/blob/Fall2026/Lab%202/README.md
+
+Feiyu Zhou、Sirapop Umnakkittikul https://github.com/Morinzzz/Interactive-Lab-Hub/blob/Fall2026/Lab%202/README.md
+
+Bowei Huang(bh654), Shengye Wang https://github.com/bh654-dev/Interactive-Lab-Hub/blob/Fall2026/Lab%202/README.md
+
 # Lab 2 Part 2
 
 ## Prep 
