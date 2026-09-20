@@ -206,6 +206,7 @@ We started off designing our device by expecting it to be a combination of utili
 The concept has four phases: sunrise, daytime, sunset, and night. The sun emerges from the horizon in the morning, moves across the sky during the day, and disappears below the horizon in the evening. And the night scene features a moon and stars. Changes in the background color reinforce these transitions.
 The landscape provides a visual sense of where we are within the daily cycle, while a smaller numerical display provides the exact time. Our prototype uses simplified, preset sunrise and sunset times to explore this way of representing time.
 
+<img width="452" height="301" alt="story_board" src="https://github.com/user-attachments/assets/126f8bf2-20a8-4754-b836-23783998f4eb" />
 
 
 
