@@ -225,6 +225,14 @@ Bowei Huang(bh654), Shengye Wang https://github.com/bh654-dev/Interactive-Lab-Hu
 1. Pick up remaining parts for kit on Wednesday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
 
 2. Look at and give feedback on the Part E. for at least 3 other people in the class and get 3 people to comment on your Part E!)
+****Put the feedback for your ideas here：**
+
+Yangchen Jin’s idea also took a focus on clear and intuitive indication of time with just a glimpse. Using a very simple but clever combination of size, binary state and order, the envisioned plan did a really good job on telling the time to anyone without requirement of language or understanding of reading gauges. I do think it will be more interactive and pleasing if additional aesthetics elements may be added such as colors and other interactive elements.
+
+Feiyu Zhou and Sirapop Umnakkittikul’s project took a very different approach compared to Yangchen, where aesthetics were taken to utmost consideration and the whole interaction was a lot more complicated and visually appealing. They decided to use numbers as a direct representation of time and added an additional element of a “growing animal” as an alternative way of exhibiting the flow of time in a more macroscopic level. I think it serves really as a unique “clock” considering how our everyday objects are just plainly showing time with numbers and simple clicks.
+
+Bowei Huang and Shengye Wang’s idea is like an even further exploration of Feiyu and Sirapop’s attempt where the functionality of delivering a sense of time were completely expressed through the action of the “pet”. They use a cat as a model, which I personally feel more attracted to, and use its routine action to represent different sections of the day. I really like the overall plan, where it is fun and interactive, but I also see potential discrepancies between different users as individuals may have different schedules for routine activities.
+
 **Put the feedback for your ideas here.**
 
 ## Update your Lab Hub
