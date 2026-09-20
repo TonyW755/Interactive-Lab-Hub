@@ -202,6 +202,11 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 ** Insert ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf)), storyboards for your ideas **
 
+We started off designing our device by expecting it to be a combination of utility and intuitiveness. And through our exploration, we quickly realized the idea is very similar to our day to day device watches. In particular, smartwatches like Apple Watch offer a very similar outcome which allow people to understand time through different combinations of complexity and graphic indication. We derive from the solar-themed watch faces on Apple Watch, which connect the time of day with the sun’s position. We want to adapt this idea to a small Raspberry Pi display, using changes in the sky to make the progression of a day visually understandable.
+The concept has four phases: sunrise, daytime, sunset, and night. The sun emerges from the horizon in the morning, moves across the sky during the day, and disappears below the horizon in the evening. And the night scene features a moon and stars. Changes in the background color reinforce these transitions.
+The landscape provides a visual sense of where we are within the daily cycle, while a smaller numerical display provides the exact time. Our prototype uses simplified, preset sunrise and sunset times to explore this way of representing time.
+
+
 
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
