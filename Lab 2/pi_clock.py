@@ -1,17 +1,5 @@
-"""A day/night PiClock for the 240 x 135 Mini PiTFT.
-
-Based on TonyW755's Lab 2 pi_clock.py (419c1e3). The original sun, moon,
-stars and four time periods are retained; animation, layout, demo mode and
-verification were developed with OpenAI Codex assistance.
-
-Run: python pi_clock.py
-Button A (GPIO23): switch between local time and a 60-second day.
-Preview without a Pi: python pi_clock.py --preview pi_clock_preview.gif
-Sunrise/sunset are configurable design presets, not astronomical forecasts.
-"""
 
 from __future__ import annotations
-
 import argparse
 from dataclasses import dataclass
 from datetime import datetime, timedelta
