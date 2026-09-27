@@ -135,6 +135,8 @@ Available sizes, smallest first: `tiny.en`, `base.en`, `small.en`, `medium.en`. 
 \*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
 <img width="2776" height="617" alt="image" src="https://github.com/user-attachments/assets/9f09c195-7580-491c-8656-4a74087e07a3" />
 
+For the 5 second recording, I test two models tiny.en and base.en as shown in the figure above. According to the data, the transcription was 1.02s for the tiny.en model and had a real-time factor of 0.20×, while the transcription of base.en was 2.06s with a real-time factor of 0.41×. In this example, both models produced identical transcripts, hence the larger model did not explicitly express an improvement in accuracy, while taking about twice as long to process. For a system that requires immediate response, tiny.en would be more suited because trade-off between delay and high precision is not worthwhile. However, for a noisy surrounding or speech, base.en and larger model would be more suitable as accuracy improvement is necessary and have huge impact on the output.
+
 
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
 
