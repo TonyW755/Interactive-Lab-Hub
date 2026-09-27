@@ -111,6 +111,8 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 The shell file used to greet myself using 'Neural' TTS is saved as the following file [Greet.sh](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%203/speech-scripts/Greet.sh)
 
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
+The greeting differed between the three voices, even though the greeting phrase were identical. Firstly, with 'espeak', the voice sounded very robotic and the rate of speech was extremely fast. On the other hand, the neural Piper voice sounded much more natural, which made the greeting feel warmer. Finally, 'festival' was in between these two voices as it uses recorded fragments of a real speaker making it a little more human. However, the overall speech still felt unnatural as the recorded pieces were stitched together and lacked Continuity. Therefore, Neural Piper was my favourite voice as it sounded much smoother and natural which made the greeting feel personal. 
+
 
 ## B. Speech to Text
 
