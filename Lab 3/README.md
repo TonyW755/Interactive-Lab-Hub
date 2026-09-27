@@ -161,6 +161,11 @@ Speak, pause, and watch it transcribe. Now change the endpointing threshold — 
 ```
 
 \*\***Try both extremes, and something in between. Describe what each one feels like to talk to. Note specifically: at 0.2s, what kinds of normal speech get cut off? At 1.5s, what does the delay make the system seem like?**\*\*
+<img width="881" height="188" alt="Screenshot 2026-09-27 at 18 47 16" src="https://github.com/user-attachments/assets/9e21ede9-f103-4999-9259-9316606f1072" />
+
+<img width="905" height="165" alt="Screenshot 2026-09-27 at 18 46 56" src="https://github.com/user-attachments/assets/bd1618b4-5a8b-4970-a0c1-9e6a9e18cd9d" />
+
+
 
 There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
 
