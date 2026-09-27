@@ -140,7 +140,7 @@ For the 5 second recording, I test two models tiny.en and base.en as shown in th
 
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* 
 
-The following script asks for a phone number and records the input [phone.sp]( 
+The following script asks for a phone number and records the input [phone.sp](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%203/speech-scripts/phone.sh) 
 
 ## C. Turn-taking: knowing when someone has stopped talking
 
