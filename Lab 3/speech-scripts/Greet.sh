@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-
 # Neural TTS greeting with Piper
-
 set -euo pipefail
-
 VOICES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/voices"
 
 python3 -m piper \
