@@ -192,7 +192,7 @@ Write out what you imagine the dialogue to be. Use cards, post-its, or whatever 
 
 \*\***Please describe and document your process.**\*\*
 
-<img width="382" height="690" alt="Screenshot 2026-09-27 at 20 59 34" src="https://github.com/user-attachments/assets/fcfbf941-8edd-4ecb-9201-763bebcf27dd" />
+<img width="351" height="649" alt="Screenshot 2026-09-27 at 21 01 41" src="https://github.com/user-attachments/assets/55d2d242-9ace-4811-9214-9d67497ad8b7" />
 
 
 Your script should include the pauses. Where does your device wait, and for how long? You now know from Part C that this is a parameter you have to choose, not something that happens for free.
