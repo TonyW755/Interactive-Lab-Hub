@@ -213,9 +213,15 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings.
+Better timing: The device should finish speaking before it starts listening and a short sound and a screen message can tell the visitor when to speak.
+Check the answer: Speech recognition may confuse similar names or miss interpret names due to accent. Hence, before sending the request, the device should confirm with a screen message display about the name and floor of the occupant. For example, "You’re visiting Maya Chen on floor eight. Is that correct?".
+Help with mistakes: If the answer is unclear, ask for the missing part again: “I didn’t catch the floor number. Please say it again.”
 2. What are other modes of interaction *beyond speech* that you might also use to clarify how to interact? In particular: how does someone know when the device is listening, and when it is thinking? You have a screen and an LED.
-3. Make a new storyboard, diagram and/or script based on these reflections.
-4. (optional) Integrate [input devices](inputs.md) in the system
+The screen and LED should clearly show what the device is doing through simple messages, light patterns, and colours. When the device is recording the visitor’s voice, the LED stays green and the screen shows “Now recording.” Once recording is complete, the LED begins to blink and the screen shows “Processing your request.” After the request is sent to the occupant, the LED turns red and the screen shows “Waiting for confirmation.” Only when the occupant approves the visit, the LED turns green again and the screen shows “Access granted” or else the LED remains red and shows "Access denied".
+4. Make a new storyboard, diagram and/or script based on these reflections.
+   <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/6d6549e7-4c37-474f-9284-49efd38a96b8" />
+
+6. (optional) Integrate [input devices](inputs.md) in the system
 
 ## Prototype your system
 
