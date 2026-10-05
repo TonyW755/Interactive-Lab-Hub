@@ -231,6 +231,7 @@ The system should:
 * require participants to speak to it
 
 *Document how the system works.*
+The code is generated with the support of chatgpt and is saved in the following file [visitor.py](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%203/visitor.py)
 <img width="1488" height="1212" alt="image" src="https://github.com/user-attachments/assets/a7b53a23-ee23-415e-bb01-2e253ef574b5" />
 
 <img width="1800" height="1150" alt="image" src="https://github.com/user-attachments/assets/9d69f5f2-bc5b-4d89-a119-57f3612f9135" />
