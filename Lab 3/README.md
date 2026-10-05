@@ -265,7 +265,7 @@ The controller is the part that plays Maya answering on her phone. In my final v
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-The device should listen until the person stops talking, not record for a fixed time. The turn-taking from Part C would fix that. It should also repeat back what it heard, like "You're visiting Maya Chen on floor 8, right?", before sending the request, and ask again when it isn't sure instead of turning people away. A real version also needs a real link to the resident's phone with Allow and Deny buttons, plus a timeout if nobody answers. Finally, people relied a lot on the screen and the light, so a more autonomous version should keep those visual cues.
+The device should listen until the person stops talking, not record for a fixed time. It should also repeat back what it heard, like "You're visiting Maya Chen on floor 8, right?", before sending the request, and ask again when it isn't sure instead of turning people away. A real version also needs a real link to the resident's phone with Allow and Deny buttons, plus a timeout if nobody answers. Finally, people relied a lot on the screen and the light, so a more autonomous version should keep those visual cues.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
