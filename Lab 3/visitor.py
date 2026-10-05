@@ -1,3 +1,40 @@
+import subprocess
+import sys
+import tempfile
+import time
+from pathlib import Path
+
+import board
+import digitalio
+from PIL import Image, ImageDraw, ImageFont
+import adafruit_rgb_display.st7789 as st7789
+
+# File locations
+BASE = Path(__file__).resolve().parent
+VOICES_DIR = BASE.parent / "voices"
+RECORD_SECONDS = 8
+
+# Mini PiTFT 1.14-inch display
+spi = board.SPI()
+cs = digitalio.DigitalInOut(board.CE0)
+dc = digitalio.DigitalInOut(board.D25)
+
+display = st7789.ST7789(
+    spi,
+    cs=cs,
+    dc=dc,
+    rst=None,
+    baudrate=64000000,
+    width=135,
+    height=240,
+    x_offset=53,
+    y_offset=40
+)
+
+# Turn on the screen backlight
+backlight = digitalio.DigitalInOut(board.D22)
+backlight.switch_to_output(value=True)
+
 from PIL import Image, ImageDraw, ImageFont
 try:
     font = ImageFont.truetype(
