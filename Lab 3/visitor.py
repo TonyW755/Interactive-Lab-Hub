@@ -1,11 +1,13 @@
-
+import re
 import subprocess
 import sys
-import tempfile
 import time
+import wave
 from concurrent.futures import ThreadPoolExecutor
+from difflib import SequenceMatcher
 from pathlib import Path
  
+import numpy as np
 import board
 import digitalio
 from PIL import Image, ImageDraw, ImageFont
@@ -16,18 +18,26 @@ BASE = Path(__file__).resolve().parent
 VOICES_DIR = BASE / "voices"
 if not VOICES_DIR.is_dir():
     VOICES_DIR = BASE.parent / "voices"
-AUDIO_DIR = Path(tempfile.gettempdir())
+RECORDINGS_DIR = BASE / "recordings"   # the visitor's answers are saved here
+RECORDINGS_DIR.mkdir(exist_ok=True)
  
 RESIDENT = "Maya Chen"
 FLOOR = 8
+FLOOR_WORDS = ("8", "8th", "eight", "eighth")   # ways Whisper writes floor 8
+ 
+MIC_DEVICE = None       # e.g. "plughw:3,0" if the default mic is wrong (see arecord -l)
 RECORD_SECONDS = 5      # how long each answer is recorded
+MAX_TRIES = 2           # each question is asked at most this many times
 CONFIRM_SECONDS = 4     # pretend Maya takes this long to tap "Allow entry"
 DOOR_OPEN_SECONDS = 6   # how long "Access granted" stays on screen
+DENIED_SECONDS = 5      # how long "Access denied" stays on screen
  
 GREEN, RED, OFF = "#22dd44", "#ff3333", "#2a2a2a"
  
 # ---- Mini PiTFT, 240 x 135 in landscape --------------------------------
 # Same pins as the class Lab 2 scripts. If the screen stays blank, try board.CE0.
+# If you get "GPIO busy", stop the boot screen first:
+#     sudo systemctl stop piscreen.service
 spi = board.SPI()
 cs = digitalio.DigitalInOut(board.D5)
 dc = digitalio.DigitalInOut(board.D25)
@@ -68,7 +78,7 @@ def show(lines, led=OFF):
  
  
 def blink_while(lines, job):
-    """Run job in the background while the LED blinks green (panel 3)."""
+    """Run job in the background while the LED blinks green, then return its result."""
     with ThreadPoolExecutor(max_workers=1) as worker:
         result = worker.submit(job)
         lit = True
@@ -95,13 +105,23 @@ def speak(text):
     piper.wait()
  
  
-def ask(question, question_lines, wav_file):
-    """Panels 1 and 2: ask (LED off), then record (LED steady green)."""
-    show(question_lines)
-    speak(question)
-    show(["Now", "recording"], GREEN)
-    subprocess.run(["arecord", "-q", "-d", str(RECORD_SECONDS), "-f", "S16_LE",
-                    "-c", "1", "-r", "16000", str(wav_file)], check=True)
+def record(wav_file):
+    """Record the visitor's answer from the USB microphone into wav_file."""
+    command = ["arecord", "-q", "-d", str(RECORD_SECONDS), "-f", "S16_LE",
+               "-c", "1", "-r", "16000"]
+    if MIC_DEVICE:
+        command += ["-D", MIC_DEVICE]
+    subprocess.run(command + [str(wav_file)], check=True)
+ 
+    # Report how loud the recording was, so a muted mic is easy to spot.
+    with wave.open(str(wav_file)) as audio:
+        samples = np.frombuffer(audio.readframes(audio.getnframes()), dtype=np.int16)
+    peak = int(np.abs(samples).max()) if samples.size else 0
+    print(f"Recorded {samples.size / 16000:.1f}s to {wav_file.name} (peak level {peak})",
+          flush=True)
+    if peak < 500:
+        print("  This recording is almost silent. Check the mic with arecord -l "
+              "and alsamixer.", flush=True)
  
  
 def transcribe(wav_file):
@@ -110,29 +130,68 @@ def transcribe(wav_file):
     return " ".join(segment.text.strip() for segment in segments).strip()
  
  
+# ---- Checking the answers --------------------------------------------------
+ 
+def is_resident(text):
+    """True if the answer contains "Maya Chen". Small slips from Whisper such as
+    "Maya Chan" are accepted; other names are not."""
+    words = re.findall(r"[a-z]+", text.lower())
+    candidates = words + [a + b for a, b in zip(words, words[1:])]
+    target = RESIDENT.lower().replace(" ", "")
+    return any(SequenceMatcher(None, word, target).ratio() >= 0.85
+               for word in candidates)
+ 
+ 
+def is_resident_floor(text):
+    """True if the answer is floor 8."""
+    return any(word in FLOOR_WORDS for word in re.findall(r"[a-z0-9]+", text.lower()))
+ 
+ 
+def ask(question, question_lines, retry, wav_file, is_correct):
+    """Panels 1 and 2: ask (LED off), record (steady green), transcribe
+    (blinking green). True once the answer is right, False after MAX_TRIES."""
+    prompt = question
+    for _ in range(MAX_TRIES):
+        show(question_lines)
+        speak(prompt)
+        show(["Now", "recording"], GREEN)
+        record(wav_file)
+        heard = blink_while(["Processing"], lambda: transcribe(wav_file))
+        correct = is_correct(heard)
+        print(f'Visitor said: "{heard}" -> {"accepted" if correct else "not accepted"}',
+              flush=True)
+        if correct:
+            return True
+        prompt = retry
+    return False
+ 
+ 
+def deny(message):
+    show(["Access", "denied"], RED)
+    speak(message)
+    time.sleep(DENIED_SECONDS)
+ 
+ 
 # ---- The storyboard ----------------------------------------------------------
  
-name_wav = AUDIO_DIR / "visitor_name.wav"
-floor_wav = AUDIO_DIR / "visitor_floor.wav"
+def visit():
+    # Panel 1: only visitors for Maya Chen go further
+    if not ask("Who are you visiting?", ["Who are you", "visiting?"],
+               "Sorry, I didn't catch that. Who are you visiting?",
+               RECORDINGS_DIR / "visitor_name.wav", is_resident):
+        deny("Sorry, there is no resident by that name.")
+        return
  
-try:
-    show(["Starting..."])
-    model = WhisperModel("tiny.en", device="cpu", compute_type="int8")
+    # Panel 2: and only if they say floor 8
+    if not ask("Which floor?", ["Which floor?"],
+               "Sorry, I didn't catch the floor number. Which floor?",
+               RECORDINGS_DIR / "visitor_floor.wav", is_resident_floor):
+        deny(f"Sorry, {RESIDENT} does not live on that floor.")
+        return
  
-    # Panel 1
-    ask("Who are you visiting?", ["Who are you", "visiting?"], name_wav)
- 
-    # Panel 2
-    ask("Which floor?", ["Which floor?"], floor_wav)
- 
-    # Panel 3: transcribe the answers and send the request
-    def process_request():
-        print("Visitor said:", repr(transcribe(name_wav)), "/",
-              repr(transcribe(floor_wav)), flush=True)
-        speak(f"Thank you. Contacting {RESIDENT} on floor {FLOOR}.")
- 
+    # Panel 3: send the request, LED blinking green
     blink_while(["Processing", "your request", RESIDENT, f"Floor {FLOOR}"],
-                process_request)
+                lambda: speak(f"Thank you. Contacting {RESIDENT} on floor {FLOOR}."))
  
     # Panels 4 and 5: Maya's phone shows "Visitor at the door."
     # and she taps "Allow entry" (simulated: always allowed)
@@ -146,8 +205,14 @@ try:
     speak("Access granted. Please come in.")
     time.sleep(DOOR_OPEN_SECONDS)
  
+ 
+try:
+    show(["Starting..."])
+    model = WhisperModel("tiny.en", device="cpu", compute_type="int8")
+    visit()
 except KeyboardInterrupt:
     print("\nStopped.")
 finally:
     show([" "])
     backlight.value = False
+ 
