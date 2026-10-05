@@ -242,8 +242,8 @@ Screen capture of the controller on the phone
 
 
 Video of the interaction 
-https://github.com/user-attachments/assets/ce5da11d-e7f2-4fa1-a1da-22f9251b1757
 
+https://github.com/user-attachments/assets/19c1ab51-1fb7-47e3-8169-d7bfd3dfffeb
 
 
 
