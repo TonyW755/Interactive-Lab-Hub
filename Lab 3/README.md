@@ -256,17 +256,20 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+The screen and LED worked well. People could tell what the intercom was doing just by looking at it. Steady green meant talk, blinking green meant wait, and red meant it was waiting for Maya. The Piper voice sounded natural. In a quiet room, Whisper picked up "Maya Chen" and "floor 8" most of the time, and anyone who gave a different name or floor was turned away. What didn't work as well was the fixed 5-second recording.People who answered quickly had to stand there waiting, and people who paused could get cut off. Whisper sometimes misheard the name.
 
 ### What worked well about the controller and what didn't?
-\*\**your answer here*\*\*
+
+The controller is the part that plays Maya answering on her phone. In my final version, it waits 4 seconds and always lets the visitor in. That was simple and never broke, so the demo always reached the end. The downside is that it can't react to anything. 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-\*\**your answer here*\*\*
+
+The device should listen until the person stops talking, not record for a fixed time. The turn-taking from Part C would fix that. It should also repeat back what it heard, like "You're visiting Maya Chen on floor 8, right?", before sending the request, and ask again when it isn't sure instead of turning people away. A real version also needs a real link to the resident's phone with Allow and Deny buttons, plus a timeout if nobody answers. Finally, people relied a lot on the screen and the light, so a more autonomous version should keep those visual cues.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
-\*\**your answer here*\*\*
 
+The system already saves each answer as a sound file. I could log the transcript with it, along with how long the person took to answer, how many tries they needed, and whether they got in. After many visits, that would show how people really phrase things and which words Whisper recognise wrongly. A camera could show when someone walks up and whether they look confused. A proximity sensor could tell when a person arrives and leaves.
 <details>
   <summary><strong>Submission Cleanup Reminder (Click to Expand)</strong></summary>
 
