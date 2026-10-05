@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""Mini PiTFT visitor demo. Run beside transcribe.py in speech-scripts.
+Phone notifications and door unlocking are NOT implemented.
+Type y/n in the terminal to simulate the occupant's decision.
+"""
+
 import subprocess
 import sys
 import tempfile
@@ -9,33 +15,22 @@ import digitalio
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 
-# File locations
 BASE = Path(__file__).resolve().parent
 VOICES_DIR = BASE.parent / "voices"
 RECORD_SECONDS = 8
 
-# Mini PiTFT 1.14-inch display
+# Mini PiTFT 1.14: 240 x 135 in landscape.
+# CE0 is the standard Mini PiTFT CS pin. Use board.D5 only if wired that way.
 spi = board.SPI()
 cs = digitalio.DigitalInOut(board.CE0)
 dc = digitalio.DigitalInOut(board.D25)
-
 display = st7789.ST7789(
-    spi,
-    cs=cs,
-    dc=dc,
-    rst=None,
-    baudrate=64000000,
-    width=135,
-    height=240,
-    x_offset=53,
-    y_offset=40
+    spi, cs=cs, dc=dc, rst=None, baudrate=64000000,
+    width=135, height=240, x_offset=53, y_offset=40
 )
-
-# Turn on the screen backlight
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output(value=True)
 
-from PIL import Image, ImageDraw, ImageFont
 try:
     font = ImageFont.truetype(
         "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16
@@ -99,57 +94,3 @@ def transcribe(filename):
 def ask(question, lines, filename):
     # Finish speaking before starting the microphone.
     show(lines, "Please listen")
-    speak(question)
-    show(lines, "Now recording", "lime")
-    subprocess.run([
-        "arecord", "-d", str(RECORD_SECONDS), "-f", "S16_LE",
-        "-c", "1", "-r", "16000", str(filename)
-    ], check=True)
-    print("\nTranscript for:", question, flush=True)
-    transcribe(filename)
-
-
-try:
-    if not (BASE / "transcribe.py").is_file():
-        raise FileNotFoundError("Place this file beside transcribe.py.")
-
-    ask("Welcome. What is the name of the person you are visiting?",
-        ["Who are you", "visiting?", "Say their name."],
-        BASE / "occupant_name.wav")
-
-    ask("What floor do they live on?",
-        ["What floor do", "they live on?", "Say the floor number."],
-        BASE / "occupant_floor.wav")
-
-    # Demo stand-in for sending a request and receiving a phone reply.
-    # No real request is sent. The transcripts remain in the terminal.
-    show(["Waiting for", "confirmation", "Phone approval demo"],
-         "Waiting", "red")
-    speak("Thank you. Please wait for confirmation.")
-    decision = input("\nDEMO occupant approval: y = allow, n = deny: ")
-    while decision.strip().lower() not in ("y", "n"):
-        decision = input("Please type y or n: ")
-
-    if decision.strip().lower() == "y":
-        show(["Access granted", "You may enter.", "Demo only"],
-             "Approved", "lime")
-        speak("Your visit has been approved. You may enter.")
-    else:
-        show(["Access not approved", "Please contact", "your friend."],
-             "Not approved", "red")
-        speak("Your visit was not approved. Please contact your friend.")
-
-    input("Press Enter to close the demo.")
-except (KeyboardInterrupt, EOFError):
-    print("\nDemo stopped.")
-except (OSError, subprocess.CalledProcessError) as error:
-    show(["Something went wrong", "Check the terminal."], "Error", "red")
-    print("Error:", error, file=sys.stderr)
-    time.sleep(3)
-    sys.exit(1)
-finally:
-    backlight.value = False
-    backlight.deinit()
-    dc.deinit()
-    cs.deinit()
-    spi.deinit()
