@@ -236,6 +236,12 @@ The system should:
 <img width="1800" height="1150" alt="image" src="https://github.com/user-attachments/assets/9d69f5f2-bc5b-4d89-a119-57f3612f9135" />
 
 
+
+https://github.com/user-attachments/assets/ce5da11d-e7f2-4fa1-a1da-22f9251b1757
+
+
+
+
 *Include videos or screencaptures of both the system and the controller.*
 
 ## Test the system
