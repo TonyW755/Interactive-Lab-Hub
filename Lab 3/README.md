@@ -1,6 +1,6 @@
 # Chatterboxes
 
-**NAMES OF COLLABORATORS HERE**
+**NAMES OF COLLABORATORS HERE: Yuxuan Wang (yw2946)**
 
 [![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://www.youtube.com/embed/Q8FWzLMobx0?start=19)
 
@@ -251,7 +251,7 @@ https://github.com/user-attachments/assets/19c1ab51-1fb7-47e3-8169-d7bfd3dfffeb
 
 ## Test the system
 
-Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard *after* the interaction, but we recognize that can be hard.)
+Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard *after* the interaction, but we recognize that can be hard.) My system was tested by Xie Li (xl2323) and Hong Yuan Cao(hc2343)
 
 Answer the following:
 
