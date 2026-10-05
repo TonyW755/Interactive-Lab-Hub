@@ -1,22 +1,4 @@
-#!/usr/bin/env python3
-"""Visitor intercom: the Lab 3 storyboard, acted out on the Pi.
- 
-  Panel  What happens                          Screen                        LED
-  1      "Who are you visiting?" -> Maya Chen  Now recording                 steady green
-  2      "Which floor?"          -> Floor 8    Now recording                 steady green
-  3      answers are transcribed               Processing your request       blinking green
-                                               Maya Chen / Floor 8
-  4-5    Maya confirms on her phone            Waiting for confirmation      red
-  6      door opens                            Access granted                green
- 
-Prototype assumptions: the visitor is always here for Maya Chen on floor 8,
-and Maya always allows entry. The visitor's answers are still recorded and
-transcribed, and printed in the terminal.
- 
-Run from Lab 3/speech-scripts with the venv active:
-    python visitor_intercom.py
-"""
- 
+
 import subprocess
 import sys
 import tempfile
