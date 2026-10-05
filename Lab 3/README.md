@@ -231,6 +231,10 @@ The system should:
 * require participants to speak to it
 
 *Document how the system works.*
+<img width="1488" height="1212" alt="image" src="https://github.com/user-attachments/assets/a7b53a23-ee23-415e-bb01-2e253ef574b5" />
+
+<img width="1800" height="1150" alt="image" src="https://github.com/user-attachments/assets/9d69f5f2-bc5b-4d89-a119-57f3612f9135" />
+
 
 *Include videos or screencaptures of both the system and the controller.*
 
