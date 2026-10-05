@@ -1,4 +1,40 @@
+#!/usr/bin/env python3
+"""Mini PiTFT visitor demo. No separate transcribe.py is needed.
+Phone notifications and door unlocking are NOT implemented.
+Type y/n in the terminal to simulate the occupant's decision.
+"""
+
+import subprocess
+import sys
+import tempfile
+import time
+from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
+
+import board
+import digitalio
 from PIL import Image, ImageDraw, ImageFont
+import adafruit_rgb_display.st7789 as st7789
+from faster_whisper import WhisperModel
+
+BASE = Path(__file__).resolve().parent
+VOICES_DIR = BASE / "voices"
+if not VOICES_DIR.is_dir():
+    VOICES_DIR = BASE.parent / "voices"
+RECORD_SECONDS = 8
+
+# Mini PiTFT 1.14: 240 x 135 in landscape.
+# CE0 is the standard Mini PiTFT CS pin. Use board.D5 only if wired that way.
+spi = board.SPI()
+cs = digitalio.DigitalInOut(board.CE0)
+dc = digitalio.DigitalInOut(board.D25)
+display = st7789.ST7789(
+    spi, cs=cs, dc=dc, rst=None, baudrate=64000000,
+    width=135, height=240, x_offset=53, y_offset=40
+)
+backlight = digitalio.DigitalInOut(board.D22)
+backlight.switch_to_output(value=True)
+
 try:
     font = ImageFont.truetype(
         "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16
@@ -35,28 +71,25 @@ def speak(text):
         ], stdin=audio, check=True)
 
 
+def recognise(filename):
+    # Read all segments here so transcription finishes in the worker.
+    segments, info = model.transcribe(
+        str(filename), language="en", beam_size=1, vad_filter=True
+    )
+    return " ".join(segment.text.strip() for segment in segments).strip()
+
+
 def transcribe(filename):
-    """Blink while transcribe.py runs; its text appears in the terminal."""
-    command = [sys.executable, str(BASE / "transcribe.py"),
-               str(filename), "--model", "tiny.en"]
-    process = subprocess.Popen(command, cwd=BASE)
-    light_on = True
-    try:
-        while process.poll() is None:
+    """Transcribe in the background so the screen can keep blinking."""
+    with ThreadPoolExecutor(max_workers=1) as worker:
+        result = worker.submit(recognise, filename)
+        light_on = True
+        while not result.done():
             show(["Processing your", "answer..."],
                  "Processing", "lime", light_on)
             light_on = not light_on
             time.sleep(0.4)
-        if process.returncode != 0:
-            raise subprocess.CalledProcessError(process.returncode, command)
-    finally:
-        if process.poll() is None:
-            process.terminate()
-            try:
-                process.wait(timeout=3)
-            except subprocess.TimeoutExpired:
-                process.kill()
-                process.wait()
+        return result.result()
 
 
 def ask(question, lines, filename):
@@ -68,21 +101,26 @@ def ask(question, lines, filename):
         "arecord", "-d", str(RECORD_SECONDS), "-f", "S16_LE",
         "-c", "1", "-r", "16000", str(filename)
     ], check=True)
-    print("\nTranscript for:", question, flush=True)
-    transcribe(filename)
+    answer = transcribe(filename)
+    print(question, "->", answer, flush=True)
+    if not answer:
+        raise RuntimeError("No speech detected. Please run again and speak clearly.")
+    return answer
 
 
 try:
-    if not (BASE / "transcribe.py").is_file():
-        raise FileNotFoundError("Place this file beside transcribe.py.")
+    show(["Loading speech model", "Please wait..."], "Starting")
+    model = WhisperModel("tiny.en", device="cpu", compute_type="int8")
 
-    ask("Welcome. What is the name of the person you are visiting?",
-        ["Who are you", "visiting?", "Say their name."],
-        BASE / "occupant_name.wav")
+    name = ask("Welcome. What is the name of the person you are visiting?",
+               ["Who are you", "visiting?", "Say their name."],
+               BASE / "occupant_name.wav")
 
-    ask("What floor do they live on?",
-        ["What floor do", "they live on?", "Say the floor number."],
-        BASE / "occupant_floor.wav")
+    floor = ask("What floor do they live on?",
+                ["What floor do", "they live on?", "Say the floor number."],
+                BASE / "occupant_floor.wav")
+
+    print("\nOccupant:", name, "\nFloor:", floor)
 
     # Demo stand-in for sending a request and receiving a phone reply.
     # No real request is sent. The transcripts remain in the terminal.
@@ -105,7 +143,7 @@ try:
     input("Press Enter to close the demo.")
 except (KeyboardInterrupt, EOFError):
     print("\nDemo stopped.")
-except (OSError, subprocess.CalledProcessError) as error:
+except (OSError, RuntimeError, ValueError, subprocess.CalledProcessError) as error:
     show(["Something went wrong", "Check the terminal."], "Error", "red")
     print("Error:", error, file=sys.stderr)
     time.sleep(3)
@@ -116,3 +154,4 @@ finally:
     dc.deinit()
     cs.deinit()
     spi.deinit()
+
