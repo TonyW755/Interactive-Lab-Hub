@@ -1,4 +1,4 @@
-
+from PIL import Image, ImageDraw, ImageFont
 try:
     font = ImageFont.truetype(
         "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16
