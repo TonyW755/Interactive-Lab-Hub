@@ -297,9 +297,28 @@ As you develop your Feast Automata concept, consider where the sensor and actuat
 
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
 
+1. How quickly should it open, and can the gears lift the lid smoothly?
+
+Build a cardboard or other low-fidelity physical prototype of your design.A cardboard box with an upward-opening lid, gears, a motor, and a model dessert inside. Test the clearance and the opening speed alongside the music.
+
+2. How far should it retreat, and when should it come back? A lightweight bowl on a short sliding track.
+  
+First move it manually while someone reaches for candy, then add a distance sensor and servo to test the response.
+
+3. Do people lift their cups close enough together to trigger it?
+
+Two sensing coasters and a paper flower with movable petals. Test different timing windows and check whether the petals open reliably.
+
+4.Can the tray stop at the correct person? Does pressing a button feel natural when sharing snacks? 
+A small rotating tray with three request buttons and a motor. Test stopping positions, stability with snacks aboard, and how people use the buttons.
+
+5. Can the sensor distinguish slow and fast stirring? Does the dancer respond quickly enough to feel connected to the spoon?
+A spoon with a magnet, a sensor near the cup rim, and a cardboard puppet driven by a servo. Try different stirring speeds and observe the delay and movement.
+   
+
+
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
-Build a cardboard or other low-fidelity physical prototype of your design.
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
 
