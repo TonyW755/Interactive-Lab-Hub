@@ -319,7 +319,7 @@ A spoon with a magnet, a sensor near the cup rim, and a cardboard puppet driven 
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
-The musical dessert box was selected because it turns serving dessert into a small surprise. When the diner taps the box, music begins and the gears lift the lid upward to reveal the dessert. The music builds anticipation, while the moving lid makes the experience playful. This design also provides a manageable starting point as it has a clear trigger point and one main movement. This makes the prototyping procedure convenient and direct requiring only a simple cardboard version with gears, a motor, and a speaker to test whether the lid opens smoothly and whether the music matches the timing of the reveal.
+The musical dessert box was selected because it turns the process of serving a dessert into a small surprise. When the diner taps the box, music begins and the gears lift the lid upward to reveal the dessert. The music builds anticipation, while the moving lid makes the experience playful. This design also provides a manageable starting point as it has a clear trigger point and one main movement. This makes the prototyping procedure convenient and direct requiring only a simple cardboard version with gears, a motor, and a speaker to test whether the lid opens smoothly and whether the music matches the timing of the reveal.
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
 
