@@ -309,7 +309,7 @@ First move it manually while someone reaches for candy, then add a distance sens
 
 Two sensing coasters and a paper flower with movable petals. Test different timing windows and check whether the petals open reliably.
 
-4.Can the tray stop at the correct person? Does pressing a button feel natural when sharing snacks? 
+4. Can the tray stop at the correct person? Does pressing a button feel natural when sharing snacks? 
 A small rotating tray with three request buttons and a motor. Test stopping positions, stability with snacks aboard, and how people use the buttons.
 
 5. Can the sensor distinguish slow and fast stirring? Does the dancer respond quickly enough to feel connected to the spoon?
