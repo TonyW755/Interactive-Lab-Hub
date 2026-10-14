@@ -323,6 +323,10 @@ The musical dessert box was selected because it turns the process of serving a d
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
 
+https://github.com/user-attachments/assets/e5dae74f-9b32-4a16-b26c-e4cc3b43ad03
+
+
+
 ---
 
 ## Part 2
