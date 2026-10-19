@@ -1,6 +1,6 @@
 # Chatterboxes
 
-**NAMES OF COLLABORATORS HERE**
+**NAMES OF COLLABORATORS HERE: Yuxuan Wang (yw2946)**
 
 [![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://youtu.be/LZ0VJClIlRI?si=Yy84mcyVYuVV19mn)
 
@@ -107,9 +107,12 @@ Note that the Piper command line changed in version 1.x — voices are now downl
 The demo script also shows `--output-raw`, which streams audio to the speaker as it is generated rather than writing a file first. Listen for the difference in how quickly speech begins. In a conversational system this gap is the thing your user experiences as responsiveness.
 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
-(This shell file should be saved to your own repo for this lab.)
+
+The shell file used to greet myself using 'Neural' TTS is saved as the following file [Greet.sh](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%203/speech-scripts/Greet.sh)
 
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
+The greeting differed between the three voices, even though the greeting phrase were identical. Firstly, with 'espeak', the voice sounded very robotic and the rate of speech was extremely fast. On the other hand, the neural Piper voice sounded much more natural, which made the greeting feel warmer. Finally, 'festival' was in between these two voices as it uses recorded fragments of a real speaker making it a little more human. However, the overall speech still felt unnatural as the recorded pieces were stitched together and lacked Continuity. Therefore, Neural Piper was my favourite voice as it sounded much smoother and natural which made the greeting feel personal. 
+
 
 ## B. Speech to Text
 
@@ -130,8 +133,14 @@ The transcript is not the interesting output here — the timings are. Run it ag
 Available sizes, smallest first: `tiny.en`, `base.en`, `small.en`, `medium.en`. The `.en` variants are English-only and faster than their multilingual counterparts at the same size.
 
 \*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
+<img width="2776" height="617" alt="image" src="https://github.com/user-attachments/assets/9f09c195-7580-491c-8656-4a74087e07a3" />
 
-\*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
+For the 5 second recording, I test two models tiny.en and base.en as shown in the figure above. According to the data, the transcription was 1.02s for the tiny.en model and had a real-time factor of 0.20×, while the transcription of base.en was 2.06s with a real-time factor of 0.41×. In this example, both models produced identical transcripts, hence the larger model did not explicitly express an improvement in accuracy, while taking about twice as long to process. For a system that requires immediate response, tiny.en would be more suited because trade-off between delay and high precision is not worthwhile. However, for a noisy surrounding or speech, base.en and larger model would be more suitable as accuracy improvement is necessary and could have a huge impact on the output.
+
+
+\*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* 
+
+The following script asks for a phone number and records the input [phone.sp](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%203/speech-scripts/phone.sh) 
 
 ## C. Turn-taking: knowing when someone has stopped talking
 
@@ -152,6 +161,13 @@ Speak, pause, and watch it transcribe. Now change the endpointing threshold — 
 ```
 
 \*\***Try both extremes, and something in between. Describe what each one feels like to talk to. Note specifically: at 0.2s, what kinds of normal speech get cut off? At 1.5s, what does the delay make the system seem like?**\*\*
+<img width="881" height="188" alt="Screenshot 2026-09-27 at 18 47 16" src="https://github.com/user-attachments/assets/9e21ede9-f103-4999-9259-9316606f1072" />
+
+With an end pointing threshold of 0.2 s, the system felt very responsive, but the system was a bitt too sensitive to short pauses. Normal pauses between phrases and brief hesitations caused the speech to be split into separate sentences.
+
+<img width="905" height="165" alt="Screenshot 2026-09-27 at 18 46 56" src="https://github.com/user-attachments/assets/bd1618b4-5a8b-4970-a0c1-9e6a9e18cd9d" />
+
+With an end pointing threshold of 1.5 s, the system allowed more natural pauses and speeches were less likely to cut-off. However, the long waiting period after individual speeches made the system feel slightly unresponsive.
 
 There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
 
@@ -169,9 +185,15 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/79d0da91-1816-4801-b2da-012b0f3dddd4" />
+
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
 
 \*\***Please describe and document your process.**\*\*
+
+<img width="351" height="649" alt="Screenshot 2026-09-27 at 21 01 41" src="https://github.com/user-attachments/assets/55d2d242-9ace-4811-9214-9d67497ad8b7" />
+
 
 Your script should include the pauses. Where does your device wait, and for how long? You now know from Part C that this is a parameter you have to choose, not something that happens for free.
 
@@ -191,9 +213,15 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings.
+Better timing: The device should finish speaking before it starts listening and a short sound and a screen message can tell the visitor when to speak.
+Check the answer: Speech recognition may confuse similar names or miss interpret names due to accent. Hence, before sending the request, the device should confirm with a screen message display about the name and floor of the occupant. For example, "You’re visiting Maya Chen on floor eight. Is that correct?".
+Help with mistakes: If the answer is unclear, ask for the missing part again: “I didn’t catch the floor number. Please say it again.”
 2. What are other modes of interaction *beyond speech* that you might also use to clarify how to interact? In particular: how does someone know when the device is listening, and when it is thinking? You have a screen and an LED.
-3. Make a new storyboard, diagram and/or script based on these reflections.
-4. (optional) Integrate [input devices](inputs.md) in the system
+The screen and LED should clearly show what the device is doing through simple messages, light patterns, and colours. When the device is recording the visitor’s voice, the LED stays green and the screen shows “Now recording.” Once recording is complete, the LED begins to blink and the screen shows “Processing your request.” After the request is sent to the occupant, the LED turns red and the screen shows “Waiting for confirmation.” Only when the occupant approves the visit, the LED turns green again and the screen shows “Access granted” or else the LED remains red and shows "Access denied".
+4. Make a new storyboard, diagram and/or script based on these reflections.
+   <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/6d6549e7-4c37-474f-9284-49efd38a96b8" />
+
+6. (optional) Integrate [input devices](inputs.md) in the system
 
 ## Prototype your system
 
@@ -204,26 +232,44 @@ The system should:
 
 *Document how the system works.*
 
+The code is generated with the support of chatgpt and is saved in the following file [visitor.py](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%203/visitor.py)
+
+Screen capture of the system
+<img width="1488" height="1212" alt="image" src="https://github.com/user-attachments/assets/a7b53a23-ee23-415e-bb01-2e253ef574b5" />
+
+Screen capture of the controller on the phone
+<img width="1800" height="1150" alt="image" src="https://github.com/user-attachments/assets/9d69f5f2-bc5b-4d89-a119-57f3612f9135" />
+
+
+Video of the interaction 
+
+https://github.com/user-attachments/assets/19c1ab51-1fb7-47e3-8169-d7bfd3dfffeb
+
+
+
 *Include videos or screencaptures of both the system and the controller.*
 
 ## Test the system
 
-Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard *after* the interaction, but we recognize that can be hard.)
+Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard *after* the interaction, but we recognize that can be hard.) My system was tested by Xie Li (xl2323) and Hong Yuan Cao(hc2343)
 
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+The screen and LED worked well. People could tell what the intercom was doing just by looking at it. Steady green meant talk, blinking green meant wait, and red meant it was waiting for Maya. The Piper voice sounded natural. In a quiet room, Whisper picked up "Maya Chen" and "floor 8" most of the time, and anyone who gave a different name or floor was turned away. What didn't work as well was the fixed 5-second recording.People who answered quickly had to stand there waiting, and people who paused could get cut off. Whisper sometimes misheard the name.
 
 ### What worked well about the controller and what didn't?
-\*\**your answer here*\*\*
+
+The controller is the part that plays Maya answering on her phone. In my final version, it waits 4 seconds and always lets the visitor in. That was simple and never broke, so the demo always reached the end. The downside is that it can't react to anything. 
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-\*\**your answer here*\*\*
+
+The device should listen until the person stops talking, not record for a fixed time. It should also repeat back what it heard, like "You're visiting Maya Chen on floor 8, right?", before sending the request, and ask again when it isn't sure instead of turning people away. A real version also needs a real link to the resident's phone with Allow and Deny buttons, plus a timeout if nobody answers. Finally, people relied a lot on the screen and the light, so a more autonomous version should keep those visual interpretations.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
-\*\**your answer here*\*\*
 
+The system already saves each answer as a sound file. I could log the transcript with it, along with how long the person took to answer, how many tries they needed, and whether they got in. After many visits, that would show how people really phrase things and which words Whisper recognise wrongly. A camera could show when someone walks up and whether they look confused. A proximity sensor could tell when a person arrives and leaves.
 <details>
   <summary><strong>Submission Cleanup Reminder (Click to Expand)</strong></summary>
 
