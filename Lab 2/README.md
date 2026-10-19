@@ -1,5 +1,5 @@
 # Interactive Prototyping: The Clock of Pi
-**NAMES OF COLLABORATORS HERE**
+**NAMES OF COLLABORATORS：Hanle Gu（hg542）, YuxuanWang（yw2946）**
 
 Does it feel like time is moving strangely during this semester?
 
@@ -158,10 +158,18 @@ You can look in `image.py` for an example of how to display an image on the scre
 
 \*\*\***Include a picture of your own Raspberry Pi displaying the piscreen.service with your unique MAC address. Additionally, please provide another picture showing the successful completion of the screen test.**\*\*\*
 
+<img src="https://github.com/user-attachments/assets/bc4f90ee-a4b6-4f75-9170-05a5234c7a9d" height="400" />
+
+https://github.com/user-attachments/assets/d14f6f42-39e6-4cde-a9e7-b8d88d43600f
+
+
 
 ## Part D. 
 ### Set up the Display Clock Demo
 Work on `screen_clock.py`, try to show the time by filling in the while loop (at the bottom of the script where we noted "TODO" for you). You can use the code in `cli_clock.py` and `stats.py` to figure this out.
+
+<img src="https://github.com/user-attachments/assets/3f513b4e-c368-42f9-99e6-2bfdd14a04ca" height="400" />
+
 
 ### How to Edit Scripts on Pi
 Option 1. One of the ways for you to edit scripts on Pi through terminal is using [`nano`](https://linuxize.com/post/how-to-use-nano-text-editor/) command. You can go into the `screen_clock.py` by typing the follow command line:
@@ -194,9 +202,21 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 ** Insert ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf)), storyboards for your ideas **
 
+We started off designing our device by expecting it to be a combination of utility and intuitiveness. And through our exploration, we quickly realized the idea is very similar to our day to day device watches. In particular, smartwatches like Apple Watch offer a very similar outcome which allow people to understand time through different combinations of complexity and graphic indication. We derive from the solar-themed watch faces on Apple Watch, which connect the time of day with the sun’s position. We want to adapt this idea to a small Raspberry Pi display, using changes in the sky to make the progression of a day visually understandable.
+The concept has four phases: sunrise, daytime, sunset, and night. The sun emerges from the horizon in the morning, moves across the sky during the day, and disappears below the horizon in the evening. And the night scene features a moon and stars. Changes in the background color reinforce these transitions.
+The landscape provides a visual sense of where we are within the daily cycle, while a smaller numerical display provides the exact time. Our prototype uses simplified, preset sunrise and sunset times to explore this way of representing time.
+
+<img width="452" height="301" alt="story_board" src="https://github.com/user-attachments/assets/126f8bf2-20a8-4754-b836-23783998f4eb" />
+
 
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
+
+Yangchen Jin https://github.com/MortalJin/Interactive-Lab-Hub/blob/Fall2026/Lab%202/README.md
+
+Feiyu Zhou、Sirapop Umnakkittikul https://github.com/Morinzzz/Interactive-Lab-Hub/blob/Fall2026/Lab%202/README.md
+
+Bowei Huang(bh654), Shengye Wang https://github.com/bh654-dev/Interactive-Lab-Hub/blob/Fall2026/Lab%202/README.md
 
 # Lab 2 Part 2
 
@@ -205,6 +225,15 @@ We strongly discourage literal digital or analog clock display: Be creative.
 1. Pick up remaining parts for kit on Wednesday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
 
 2. Look at and give feedback on the Part E. for at least 3 other people in the class and get 3 people to comment on your Part E!)
+
+****Put the feedback for your ideas here：**
+
+Yangchen Jin’s idea also took a focus on clear and intuitive indication of time with just a glimpse. Using a very simple but clever combination of size, binary state and order, the envisioned plan did a really good job on telling the time to anyone without requirement of language or understanding of reading gauges. I do think it will be more interactive and pleasing if additional aesthetics elements may be added such as colors and other interactive elements.
+
+Feiyu Zhou and Sirapop Umnakkittikul’s project took a very different approach compared to Yangchen, where aesthetics were taken to utmost consideration and the whole interaction was a lot more complicated and visually appealing. They decided to use numbers as a direct representation of time and added an additional element of a “growing animal” as an alternative way of exhibiting the flow of time in a more macroscopic level. I think it serves really as a unique “clock” considering how our everyday objects are just plainly showing time with numbers and simple clicks.
+
+Bowei Huang and Shengye Wang’s idea is like an even further exploration of Feiyu and Sirapop’s attempt where the functionality of delivering a sense of time were completely expressed through the action of the “pet”. They use a cat as a model, which I personally feel more attracted to, and use its routine action to represent different sections of the day. I really like the overall plan, where it is fun and interactive, but I also see potential discrepancies between different users as individuals may have different schedules for routine activities.
+
 **Put the feedback for your ideas here.**
 
 ## Update your Lab Hub
@@ -214,6 +243,8 @@ We strongly discourage literal digital or analog clock display: Be creative.
 ## Modify the barebones clock to make it your own
 
 Start small, pick just one element of your overall idea, just to show you have a handle on the code and components.
+
+The First element we modified was color. Based on our initial idea we decided to start simple by altering the background colour based on time. During the day, the background is blue and during the night the background is black. The coding of our initial Piclock in attached as [pi_initial_clock.py](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%202/pi_initial_clock.py).
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
@@ -240,11 +271,22 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
+The coding was supported by chatgpt and is stored on the Lab 2 Github repo as [pi_clock.py](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%202/pi_clock.py)
+
 \*\*\***Take a video of your PiClock.**\*\*\*
+
+
+
+https://github.com/user-attachments/assets/64a53772-8dd6-45d0-b2ed-ffc5180cc1ed
+
+
+
+
 
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab.  Make sure the page for the group turn in is linked to your personal Interactive Lab Hub page. 
+
 
 
