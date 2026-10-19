@@ -2,9 +2,9 @@
 
 _This project is to be done in teams of 2._
 
-**NAME OF BOTH COLLABORATOR(S) HERE**
+**NAME OF BOTH COLLABORATOR(S) HERE:** Yuxuan Wang and Hanle Gu
 
-**THE MASTERWORK YOU DREW FROM THE HAT:**
+**THE MASTERWORK YOU DREW FROM THE HAT:** The Clavilux by Thomas Wilfred
 
 ---
 
@@ -78,30 +78,32 @@ page.
 # The Report
 
 ## Part 0. Know Your Master
-
-Before you prototype anything, get intimately acquainted with the piece you
-drew. Do real research. You are looking less for trivia than for the *shape of
-the interaction*:
-
-- What inputs are available to the user? What responses does the work give?
-- Who is present, and how does the piece color the relationships between them?
-- What is the piece famous for? What are its strengths and its weaknesses?
-
-  Sometimes the details of how the interaction worked are lost in history. Try filling it in with your imagination!
-
 **Describe your masterwork here, in your own words. What is the core interaction
 someone would recognize it by?**
 
+The Clavilux invented by Thomas Wilfred in the early 20th century is a performable instrument that generates lumia, which is understood as a visual light art at the time. The light projected onto the screen using a range of instruments including glass discs, lenses, motorized reflectors to generate shifting shapes and colours, hence resonating with the latin form of Clavilux, which means “light played by key”[wiki](https://en.wikipedia.org/wiki/Clavilux) 
+
+What inputs are available to the user? What responses does the work give?
+While the original model of Clavilux doesn’t allow interaction between viewers and the installation, as viewers may only watch pre-determined patterns of lumia, later versions of the installation allows interaction between user and the device.
+
+Who is present, and how does the piece color the relationships between them?
+Only the device and the viewer(generally individuals or few people depending on the scale of the device), will be present at the scene. The relationship between installation and viewer depends on the possibility of interaction in between, since some models may not be interacted with. 
+
+What is the piece famous for? What are its strengths and its weaknesses?
+Clavilux, an instrumental way of displaying lumia, and its inventor Thomas Wilfred, demonstrate an avant garde style art form that directly influences population’s understanding of what art can be and how they may be carried out. 
+
 ## Part A. Plan
 
-For your masterwork, reconstruct the interaction as a scene:
+In these performances, light was the medium of expression. Therefore, it led us to consider how light can communicate intention and affect emotions. Our device explores this idea through an interactive process that reads the user’s facial expressions and physical actions to generate different themes of shapes and colours with the aim of influencing their mood. The device also changes colour based on weather and time, providing users with clear visual interpretation about their surroundings. In our design the Light serves two main purposes; it creates a congenial atmosphere to influence emotion and acts as an effective medium of communication. 
 
-- **Setting:** Where and when does this interaction happen? (a jungle, a kitchen,
-  a spaceship corridor, a nightclub, a harbor at night)
-- **Players:** Who is involved? Who else is present? Think through everyone in
-  the setting, not just the primary user.
-- **Activity:** What is happening between the players and the light?
-- **Goals:** What is each player trying to do?
+_Setting:_ The interaction is assumed to take place inside a studio apartment or a One-person household where the occupant is trying to relax from work (sitting on a sofa or laying in bed). The lighting display is placed nearby and alters its brightness, colour and shape to generate a cosy atmosphere.
+
+_Players:_ The main players in this scenario are the occupant and the lighting device. Although friends and family may occasionally visit, the general interaction process remains the same. When multiple faces are recognised the device implement changes based on an algorithm that identifies different scenarios (e.g party, family dinning and late night chat)
+
+_Activity:_ The device reads the user’s facial expressions and physical actions to generate different themes of lighting with the aim of influencing their mood. The device also changes colour based on weather and time, providing users with clear visual interpretation about their surroundings.
+
+_Goals:_ The device generates a congenial atmosphere providing the occupant with a sense of belonging and comfort. The device also acts as an effective medium of communication generating to provide consumers with clear visual interpretation about their surroundings.
+
 
 **Describe your setting, players, activity, and goals here.**
 
@@ -112,7 +114,11 @@ and the people around it. If you're new to storyboarding, read
 
 **Include pictures of your storyboards here.**
 
-Use the storyboards to decide what interaction to prototype.
+<img width="684" height="542" alt="Screenshot 2026-08-30 at 23 07 05" src="https://github.com/user-attachments/assets/b31f26d5-bfd0-47ca-93e2-65b1d87e50ec" />
+<img width="722" height="531" alt="Screenshot 2026-08-30 at 23 07 24" src="https://github.com/user-attachments/assets/85f05573-9e72-4f57-b56f-0fcf7217bbd7" />
+<img width="702" height="576" alt="Screenshot 2026-08-30 at 23 07 40" src="https://github.com/user-attachments/assets/6f3d85cd-6d3d-4f43-a2dd-4a8de5a77012" />
+<img width="1000" height="492" alt="Screenshot 2026-09-02 at 18 39 35" src="https://github.com/user-attachments/assets/ea5adf50-5caf-459c-aae4-493778c9a164" />
+
 
 **Summarize the feedback you got here.**
 
@@ -154,6 +160,11 @@ video feed of whichever scene you want to capture.)
 
 **Include your first attempts at recording the wizarded set-up here.**
 
+
+https://github.com/user-attachments/assets/f3c3d186-4e50-4b6d-a6b8-3604c9fe7752
+
+
+
 ## Part E. (optional) Costume the Device
 
 Only now should you worry about what the device looks like. Costume your phone so it reads
@@ -176,6 +187,9 @@ who doesn't should come away understanding what it's famous for. How might you i
 
 **Include your video here.**
 
+https://github.com/user-attachments/assets/e5682151-aa4f-4426-8365-d9ba1c00ec02
+
+
 **Please indicate who you collaborated with on this lab.** Be generous in
 acknowledging their contributions, and credit any other influences (YouTube,
 Github, Twitter, a friend who lent you a lamp) that informed your recreation.
@@ -194,7 +208,16 @@ guess the masterwork and the goals of the characters, and ask about anything tha
 wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
+
+Group 1 [Pepper's Ghost by Xie Li](https://github.com/mc3223/Peppers-Ghost/blob/Fall2026/Lab%201/README.md)
+
+Group 2 [GLOWORM by Hong Yuan Cao](https://github.com/hongyuanc/Interactive-Lab-Hub)
+
+Group 3 [Philips Hue by Shenye Wang](https://github.com/sw2486-hub/Interactive-Lab-Hub/blob/Fall2026/Lab%201/README.md)
+
 **Summarize the feedback you got from your partners here.**
+
+The feedback we received was generally positive about the connection between our idea and the original art work. People liked our idea on how use of light, colour, and movement could influence emotions and communicate intention. However, some suggested that we could do more research into how different colours, movements and shape could create different experiences as it wasn't clearly expressed in the story boards. The design uses both facial expressions and physical movement was seen as an interesting way to convert the Clavilux into an interactive device. However, the device contains multiple interactive features including facial expressions, weather, time and multiple-user scenarios making the system unnecessarily complicated. Therefore, moving forwards we were advised to focus on a few key interactions and develop them more clearly. It was also suggested that we maintain the abstract and movement patterns of the original Clavilux so that our design differentiates from a normal smart lighting system.
 
 ## Remix, Update, or Critique the Master
 
@@ -217,7 +240,27 @@ your response engages with what your master was really doing.
 **Document everything here — especially the storyboard and video. Photos of the
 prototype are great too.**
 
----
+**Updated Version:**
+For the updated design, we decided to combine the Clavilux with the interior of a car. Firstly we decided to replace the panoramic sunroof with a surface that displays moving light, colours and abstract patterns inspired by lumia. The system is mainly designed for passengers during long road trips, where the changing light show can make the journey feel less repetitive and create different atmospheres inside the car. Similar to our original design, the patterns alternates corresponding to the music, physical movement, time of day and the surrounding environment.This allows passengers to influence and interact with the light show instead of watching it. Compared with a panoramic glass roof, this concept provides a more flexible experience without relying on large areas of glass that increases inner temperature. 
+
+_Setting:_ The interaction is assumed to take place inside a SUV and is for passengers during long road trips to improve their travel experience. 
+
+_Players:_ The main players in this case are the passengers and the lighting device. The device is not designed to respond to the driver due to safety reasons as this could distract them causing potential safety risks. However, with the implementation of L4 autonomous vehicles, this setting could change. 
+
+_Activity:_ The device reads the user’s physical actions and music  to generate different themes of lighting with the aim of influencing their mood. The device also changes colour based on weather and time providing users with clear visual interpretation about their surroundings.
+
+_Goals:_ The device generates a congenial atmosphere providing the passengers with a sense of novelty and comfort. The device also acts as an effective medium of communication generating to provide consumers with clear visual interpretation about their surroundings.
+
+**Story-Board**
+
+<img width="1116" height="1020" alt="image" src="https://github.com/user-attachments/assets/86d20d0c-3f33-4959-b0fe-a786d5402d65" />
+
+**Include sketches of what the device might look like:**
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e4bcb060-58d7-4d63-902c-c78787c9457c" />
+
+The above picture generated using Chatgpt.ai as a demo to show a what a developed prototype might look like.
+
 
 
 
