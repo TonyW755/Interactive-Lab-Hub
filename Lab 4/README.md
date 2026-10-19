@@ -518,7 +518,8 @@ This is a playful way to visualize how the expander works, but the same techniqu
 
 ### Final Documentation
 
-We began developing our project prototype by creating a detailed [3D CAD model](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Desertbox.stl) of the box, including the interlocking panels, top section, and external gear mechanism. This model helped us visualize the overall design and plan how the individual components would fit together.
+We began developing our project prototype by creating a detailed [3D CAD model](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Desertbox.stl)) of the box, including the interlocking panels, top section, and external gear mechanism. This model helped us visualize the overall design and plan how the individual components would fit together.
+We began developing our project prototype by creating a detailed [3D CAD model]() of the box, including the interlocking panels, top section, and external gear mechanism. This model helped us visualize the overall design and plan how the individual components would fit together.
 <img width="1279" height="815" alt="Screenshot 2026-10-18 at 19 41 31" src="https://github.com/user-attachments/assets/8e765dfa-7766-4b08-b588-cbc97536df9a" />
 
 Next, we converted the box components into 2D sketches for laser cutting, including the outlines and connecting tabs needed for assembly. We also 3D-printed the gears and incorporated them into the prototype. Finally, we integrated music and linked it with the gear movement, bringing the mechanical and audio elements together （[Desert_box.py](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%204/desert_box.py)). This process allowed us to turn our digital design into a physical prototype that demonstrated the main idea of our project.
