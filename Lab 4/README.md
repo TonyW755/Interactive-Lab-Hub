@@ -17,9 +17,8 @@
 ---
 
 ## Lab Overview
-Team: <canvas group name>  
-Members: Full Name (netid, github-handle), ...  
-Project name: <name>
+Team: Desertbox 
+Members: Yuxuan Wang（yw2946), Xie Li(xl2323), Matthias Corkran（mc3223）
 
 
 For lab this week, we focus on both sensing and actuation, bringing new modes of input and output into your devices, while also prototyping the physical structure and overall look of the device. You will consider how the physical form supports sensing and actuation, and how these elements come together to shape the interaction and aesthetics of the device.
@@ -171,7 +170,8 @@ You can go the the [Adafruit GitHub Page](https://github.com/adafruit/Adafruit_C
 
 #### Rotary Encoder 
 
-A rotary encoder is an electro-mechanical device that converts the angular position to analog or digital output signals. The [Adafruit rotary encoder](https://www.adafruit.com/product/4991#technical-details) we ordered for you came pre-soldered, so you do NOT need to solder anything.
+A rotary encoder is an electro-mechanical device that converts the angular position to analog or digital output signals. The [Adafruit rotary encoder](https://www.adafruit.com/product/4991#technical-details) we ordered for you came with separate breakout board and encoder itself, that is, they will need to be soldered if you have not yet done so! We will be bringing the soldering station to the lab class for you to use, also, you can go to the MakerLAB to do the soldering off-class. Here is some [guidance on soldering](https://learn.adafruit.com/adafruit-guide-excellent-soldering/preparation) from Adafruit. When you first solder, get someone who has done it before (ideally in the MakerLAB environment). It is a good idea to review this material beforehand so you know what to look at.
+
 <p float="left">
 
    
@@ -284,14 +284,47 @@ Your kit includes these [SparkFun Qwiic OLED screens](https://www.sparkfun.com/p
 As you develop your Feast Automata concept, consider where the sensor and actuator need to be placed, what parts move, how electronics are housed, and how the overall form and aesthetics support the interaction.
 
 **\*\*\*Draw 5 sketches that explore different physical arrangements for your sensing and actuation.\*\*\***
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/1a4c636c-6108-4fce-990b-67c5457b7c31" />
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/1d63000b-c5d5-4502-81e1-e41be12719db" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/44133ae9-3200-4da9-bf46-2de37348ec74" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/83546b0f-ebb0-4596-ab69-db759e2bea54" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/7dfa76ea-ebec-4f8c-81a9-8ae0f36ceb18" />
+
+
+
+
 
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
 
+1. How quickly should it open, and can the gears lift the lid smoothly?
+
+Build a cardboard or other low-fidelity physical prototype of your design.A cardboard box with an upward-opening lid, gears, a motor, and a model dessert inside. Test the clearance and the opening speed alongside the music.
+
+2. How far should it retreat, and when should it come back? A lightweight bowl on a short sliding track.
+  
+First move it manually while someone reaches for candy, then add a distance sensor and servo to test the response.
+
+3. Do people lift their cups close enough together to trigger it?
+
+Two sensing coasters and a paper flower with movable petals. Test different timing windows and check whether the petals open reliably.
+
+4. Can the tray stop at the correct person? Does pressing a button feel natural when sharing snacks? 
+A small rotating tray with three request buttons and a motor. Test stopping positions, stability with snacks aboard, and how people use the buttons.
+
+5. Can the sensor distinguish slow and fast stirring? Does the dancer respond quickly enough to feel connected to the spoon?
+A spoon with a magnet, a sensor near the cup rim, and a cardboard puppet driven by a servo. Try different stirring speeds and observe the delay and movement.
+   
+
+
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
-Build a cardboard or other low-fidelity physical prototype of your design.
+The musical dessert box was selected because it turns the process of serving a dessert into a small surprise. When the diner taps the box, music begins and the gears lift the lid upward to reveal the dessert. The music builds anticipation, while the moving lid makes the experience playful. This design also provides a manageable starting point as it has a clear trigger point and one main movement. This makes the prototyping procedure convenient and direct requiring only a simple cardboard version with gears, a motor, and a speaker to test whether the lid opens smoothly and whether the music matches the timing of the reveal.
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
+
+https://github.com/user-attachments/assets/e5dae74f-9b32-4a16-b26c-e4cc3b43ad03
+
+
 
 ---
 
@@ -485,10 +518,21 @@ This is a playful way to visualize how the expander works, but the same techniqu
 
 ### Final Documentation
 
-Document all the prototypes and iterations you have designed and worked on! Again, deliverables for this lab are writings, sketches, photos, and videos that show what your prototype:
-* "Looks like": shows how the device should look, feel, sit, weigh, etc.
-* "Works like": shows what the device can do
-* "Acts like": shows how a person would interact with the device
+We began developing our project prototype by creating a detailed [3D CAD model](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Desertbox.stl) of the box, including the interlocking panels, top section, and external gear mechanism. This model helped us visualize the overall design and plan how the individual components would fit together.
+<img width="1279" height="815" alt="Screenshot 2026-10-18 at 19 41 31" src="https://github.com/user-attachments/assets/8e765dfa-7766-4b08-b588-cbc97536df9a" />
+
+Next, we converted the box components into 2D sketches for laser cutting, including the outlines and connecting tabs needed for assembly. We also 3D-printed the gears and incorporated them into the prototype. Finally, we integrated music and linked it with the gear movement, bringing the mechanical and audio elements together （[Desertbox.py](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%204/desert%20box.py)). This process allowed us to turn our digital design into a physical prototype that demonstrated the main idea of our project.
+
+
+https://github.com/user-attachments/assets/e7bd0b6d-a84d-4928-a5a2-f906b06ef47c
+
+
+
+
+
+
+
+
 
 ---
 
