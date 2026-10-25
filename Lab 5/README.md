@@ -2,7 +2,7 @@
 
 **Team:**
 
-**Members:** Full Name (netid, github-handle), ...
+**Members:** Yuxuan Wang（yw2946), Xie Li(xl2323), Matthias Corkran（mc3223）
 
 **Project name:**
 
