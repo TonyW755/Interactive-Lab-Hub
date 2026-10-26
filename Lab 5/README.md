@@ -135,6 +135,7 @@ pi@raspberrypi:~ $ ollama list
 | `qwen3:0.6b` | ~0.5 GB | text only, smaller and faster (~16 tokens/s on a Pi 5) |
 
 \*\*\***Include a screenshot of `ollama list` showing your models.**\*\*\*
+<img width="993" height="117" alt="image" src="https://github.com/user-attachments/assets/2635837d-d12a-4c91-8145-faff19bc387e" />
 
 
 ## Part B. 
@@ -160,7 +161,19 @@ Then press q to quit and run it again with a flag. Each one changes a single thi
 ```
 
 \*\*\***Include a short video or screenshots of your experiments with the person detection. Write down three situations where it did not see you, or saw a person who was not there, and what you think the cause was.**\*\*\*
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/75a740f6-13c9-4b41-854c-d2febee8428f" />
 
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/b294cfe4-50ce-4d75-809c-30b1e05f51cd" />
+
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/f376102b-1689-41a7-8ea5-4de86ed69ef1" />
+
+In Part B, I tested the default person detection mode, confidence thresholds of 0.2 and 0.7, detection across all classes, and headless mode without a display window.
+
+Person detection was generally reliable. During my tests, I did not observe any instances where I remained in the camera frame but was not detected. However, although I was the only person present throughout the tests, the model sometimes detected my hand as an additional person, causing the reported count to increase to two. This was a confirmed false positive, possibly because the model interpreted the hand’s partial outline as human features.
+
+In all-class detection mode, the model incorrectly labeled my headphones as a “toilet” with a confidence of 0.61 and part of an earcup as a “banana” with a confidence of 0.52. It correctly identified a bottle as “bottle” with a confidence of 0.78. These results show that a relatively high confidence score does not necessarily indicate a correct classification.
+
+So far, I have confirmed one type of false positive in person detection. I have not yet observed two additional situations involving missed or falsely detected people.
 
 
 ## Part C. 
@@ -188,6 +201,11 @@ Try the two main features of this script: 1) pinching for percentage control (th
 Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.
 
 \*\*\***Include a screenshot or short video of the hand pose demo, and write how you might use face, hand or body pose tracking in your observant system.**\*\*\*
+[Watch the Part C hand gesture demo](./WayVNC%20-%20TigerVNC%202026-10-22%2019-59-06.mp4)
+
+In Part C, I used MediaPipe to track hand landmarks. Changing the distance between my thumb and index finger adjusted the displayed percentage, while the Quiet Coyote gesture set it to 0%.
+
+I could use these gestures in my observant system to start overnight monitoring and silently acknowledge a morning report without touching the device.
 
 
 ## Part D. 
@@ -220,12 +238,23 @@ Things in the [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.m
 
 A 0.8B model is slow and sometimes wrong. It will invent events that are not in the data and agree with a wrong premise. Give it the data, keep its job narrow, and decide what the device does when the model is unsure.
 
-\*\*\***Ask Qwen three questions to answer. Paste the questions, the answers and how long each took. Try one of them with `qwen3:0.6b` and compare.**\*\*\*
+<img width="1061" height="801" alt="image" src="https://github.com/user-attachments/assets/3afe0aa4-e66b-45ce-a030-3423e9d0f202" />
 
-<details>
-  Q&A here
-</details>
+I ran Qwen locally through Ollama with thinking disabled. I tested three bedside questions using this **synthetic log**, rather than real overnight data:
 
+- 23:00 — Nobody present.
+- 23:10 — One person entered.
+- 23:12 — The person left.
+
+| Question | Qwen3.5:0.8b response summary | Time | Evaluation |
+|---|---|---|---|
+| Did anyone enter the room after 23:00? | Nobody entered. | 2.6 s | Incorrect: one person entered at 23:10. |
+| How many minutes did the person stay in the room? | From 23:00 to 23:12, totaling 22 minutes. | 4.7 s | Incorrect: the recorded stay was 2 minutes. |
+| Can you determine whether I slept well that night? | I likely slept well because little activity occurred. | 5.9 s | Unsupported: the log contains no sleep-quality information. |
+
+**Model comparison:** I repeated the first question with `qwen3:0.6b`. It correctly identified the entry at 23:10 and departure at 23:12, taking **5.0 seconds**, compared with **2.6 seconds** for `qwen3.5:0.8b`. In this trial, the smaller model was slower but more accurate.
+
+These tests showed that even answers based on explicit logs require verification.
 
 ## Part E. 
 ### Connect: from YOLO readings to Qwen reasoning
