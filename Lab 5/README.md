@@ -287,6 +287,13 @@ asking Qwen...
 Qwen (18.4 s):
 One person came in from the right, moved close to the camera, and left after about half a minute. ...
 ```
+<img width="1067" height="723" alt="image" src="https://github.com/user-attachments/assets/ff94098f-2a95-4632-aca9-6c6c6fa4272f" />
+
+I tested the YOLO-to-Qwen pipeline three times using recorded detection logs.
+In Run 1 (11.0 s), Qwen incorrectly reported continuous presence and no movement; in Run 2 (15.7 s), it incorrectly answered that nobody left.
+For Run 3, I simplified `interpret()` to output explicit person counts without positions, aiming to reduce confusion.
+Despite the clearer 0 → 1 → 0 log, Qwen again claimed nobody left (11.7 s).
+These tests showed that simplifying the interpreter did not resolve the model’s reasoning errors.
 
 ---
 
