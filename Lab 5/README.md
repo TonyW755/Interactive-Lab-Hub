@@ -372,7 +372,7 @@ Night 1's fly landed at the edge of the liquid at 00:25, struggled for a few min
 
 **Still not handled:** I haven't verified the brief "visits" (spots that come and go). Night 2 has 13 before dawn; they could be flies touching down or camera noise, so the morning report leaves them out. And two nights with one fly is not much data.
 
-[Setup video](media/setup.mp4): the bowl on the table, the webcam clipped to a plant pot looking straight down at it, the Pi beside it, and a quiet spider over the trap at the end.
+[Setup video](https://github.com/mc3223/Peppers-Ghost/blob/Fall2026/Lab%205/media/setup.mp4): the bowl on the table, the webcam clipped to a plant pot looking straight down at it, the Pi beside it, and a quiet spider over the trap at the end.
 
 ## Part I. 
 ### Design the interaction after
@@ -392,17 +392,10 @@ Quiet night: the trap watched from 23:15 to 09:26 and caught no flies.
 
 ## Final documentation
 
-Document all the prototypes and iterations you have designed and worked on. The deliverables for this lab are writings, sketches, photos, and videos that show what your system:
+* **Looks like:** [setup video](https://github.com/mc3223/Peppers-Ghost/blob/Fall2026/Lab%205/media/setup.mp4), and the trap from the camera's view in the Part H table.
+* **Works like:** frame every 5 s → liquid mask + dark-spot detector → tracker (catch / visit / already there / unsure) → `count_result.json` → Qwen → three sentences. Two real nights above.
+* **Acts like:** quiet spider and a blinking LED before bed; a count you can check against the dish in the morning.
 
-* "Looks like": how the device sits in the room at night, and what it looks like at bedtime and in the morning.
-* "Works like": the pipeline from detector to interpreter to log to reasoner, with a real night's data.
-* "Acts like": how a person hands the night over and what they get back.
-
-\*\*\***Include a short video of the whole system**\*\*\*
-
-As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
-
-You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. Make sure the page for the group turn in is linked to your personal Interactive Lab Hub page.
 
 ## Deliverables & Submission for Lab 5
 
