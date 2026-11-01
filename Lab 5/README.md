@@ -377,13 +377,18 @@ Night 1's fly landed at the edge of the liquid at 00:25, struggled for a few min
 ## Part I. 
 ### Design the interaction after
 
-The reveal. The night produced a log; the morning turns it into something a half-awake person can take in. `morning.py` is the smallest version: it asks Qwen for a three-sentence report.
+[`report.py`](bug-counter/report.py) runs the counter, then hands Qwen **only the finished numbers** and asks for three sentences. Part D showed the model invents facts and Part E showed it turns a jittery log into "14 people", so it never decides whether there was a fly. The facts line is printed above the report so the two can be compared, and a night with no catches gets a plain sentence without asking the model at all.
 
+**Night 2 (quiet night, no model):**
 ```
-(.venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 5 $ python morning.py
+Watched 23:15-09:26. Caught 0. Already in the trap at bedtime: 0. Lamp off: 0 min. Daylight from 07:04.
+
+Quiet night: the trap watched from 23:15 to 09:26 and caught no flies.
 ```
 
-Make it yours: show the report on the Mini PiTFT, read it aloud with Piper from Lab 3, plot the night as a timeline, or ask for JSON (`--json`, Part D) and move a servo. Whatever you pick, make sure it is honest about a night in which nothing happened.
+**Night 1:**
+> **TODO (Max): on the Pi, `cd bug-counter/night1 && ../../.venv/bin/python ../report.py`, and paste the output.**
+
 
 ## Final documentation
 
