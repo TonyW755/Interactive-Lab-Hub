@@ -345,7 +345,7 @@ Before bed I refresh the trap (fresh vinegar, a drop of soap, skim out anything 
 * It then waits until no hand has been in view for 30 seconds before the first frame, so my hand (and the ripples) are never in the start-of-night reference the counter compares against.
 
 ## Part H. 
-[`capture.py`](bug-counter/capture.py) takes a 1280×720 frame every 5 seconds and logs each frame's brightness to `capture_log.jsonl`. It runs in `tmux`; the frames stay on the Pi and are not committed.
+[`capture.py`](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%205/capture.py) takes a 1280×720 frame every 5 seconds and logs each frame's brightness to `capture_log.jsonl`. It runs in `tmux`; the frames stay on the Pi and are not committed.
 
 **Two real nights:**
 
@@ -357,7 +357,7 @@ Before bed I refresh the trap (fresh vinegar, a drop of soap, skim out anything 
 | Result | <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/ecfbae86-102a-4b64-a8ed-d818c999d8b4" />| <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/87c8c1f3-75fd-4a77-9fba-ede994c98b73" />
  |
 
-Logs and counts: [night 1](bug-counter/results/night1/), [night 2](bug-counter/results/night2/).
+Logs and counts: [night 1](https://github.com/mc3223/Peppers-Ghost/tree/Fall2026/Lab%205/bug-counter/results/night1), [night 2](https://github.com/mc3223/Peppers-Ghost/tree/Fall2026/Lab%205/bug-counter/results/night2).
 
 Night 1's fly landed at the edge of the liquid at 00:25, struggled for a few minutes, sat there for about four hours, then drifted to where I found it between 04:20 and 05:20.
 
