@@ -349,18 +349,33 @@ The hand-off: the person tells the device what to watch tonight, and the device 
 \*\*\***Describe the interaction before.**\*\*\*
 
 ## Part H. 
-### Incorporate the observant system
+[`capture.py`](bug-counter/capture.py) takes a 1280×720 frame every 5 seconds and logs each frame's brightness to `capture_log.jsonl`. It runs in `tmux`; the frames stay on the Pi and are not committed.
 
-The Part E pipeline becomes the night shift. `overnight.py` runs your `interpret()` from `yolo_to_qwen.py` every few seconds, people only unless you pass `--all`, and writes the readings to `night_log.jsonl`; the reasoning waits for the morning. Start it inside `tmux` so it keeps running after you close your laptop, and stop it with Ctrl-C in the morning:
+**Two real nights:**
 
-```
-(.venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 5 $ tmux new -s night
-(.venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 5 $ python overnight.py
-```
+| | Night 1 (Oct 21–22) | Night 2 (Oct 22–23) |
+|---|---|---|
+| Recorded | 22:05 – 09:12, 7,806 frames, no gaps | 23:15 – 09:26, 7,152 frames |
+| Counter says | **1 caught, arrived 00:25** | **0 caught** |
+| In the dish in the morning | 1 fruit fly | none |
+| Result | <img src="bug-counter/results/night1/count_result.jpg" width="320"> | <img src="bug-counter/results/night2/count_result.jpg" width="320"> |
 
-Fake a night first: run it for thirty seconds while you walk around, stop it, and run `morning.py` from Part I. When that looks right, run a real night. If your storyboard needs a sensor rather than the camera, swap in the Lab 4 example code and log its reading the same way.
+Logs and counts: [night 1](bug-counter/results/night1/), [night 2](bug-counter/results/night2/).
 
-\*\*\***Screenshots or videos of the running system.**\*\*\*
+Night 1's fly landed at the edge of the liquid at 00:25, struggled for a few minutes, sat there for about four hours, then drifted to where I found it between 04:20 and 05:20.
+
+**How the counter works and how it got there.** Each fix came from checking the counter against what was actually in the frames and the dish:
+
+1. **Find the liquid** in the first frame, so nothing on the dish counts. First by saturation (amber), then switched to **yellowness (Lab b\*)** after night 2: fresh vinegar was much paler and the lamp made the white dish look peachy, so "most saturated" picked the dish.
+2. **Find dark spots** with a black-hat filter, which compares each pixel to its neighbourhood, so dawn brightening the whole dish isn't a fly. Bright glare and a ring around it are skipped.
+3. **Track spots over time:** a spot that stays 10+ minutes is a catch.
+   * The first version said the fly arrived at 00:31, not 00:25: it was ignoring a band along the rim, where the fly landed, and a struggling fly broke its track. Narrower rim margin + tracks that follow a spot further fixed it.
+   * Spots already there in the first two minutes are reported as **already in the trap**, not caught.
+4. **Daylight:** once the window starts reflecting in the liquid, its edges look like flies. Night 1 got a fake "catch" at 07:24 and night 2 got **four** between 07:10 and 07:34. Anything that appears after dawn is now "unsure", not caught. Dawn detection also needed two tries: "brighter for 10 minutes straight" missed a cloudy dawn that flickered, so it's now "the next 5 minutes are brighter on average than at bedtime".
+
+**Still not handled:** I haven't verified the brief "visits" (spots that come and go). Night 2 has 13 before dawn; they could be flies touching down or camera noise, so the morning report leaves them out. And two nights with one fly is not much data.
+
+[Setup video](media/setup.mp4): the bowl on the table, the webcam clipped to a plant pot looking straight down at it, the Pi beside it, and a quiet spider over the trap at the end.
 
 ## Part I. 
 ### Design the interaction after
