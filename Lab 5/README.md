@@ -332,13 +332,6 @@ When awake: The person checks the device’s screen. They learn one thing: “A 
 
 ## Prep for Part 2
 
-1. Look at and give feedback on the Part F storyboards.
-   **Put the feedback for your ideas here.**
-2. [Update your Lab Hub](prep.md#get-the-latest-content) to get the latest content for Part 2.
-3. Decide where the device will spend the night and who else lives there. Get their OK before the first run.
-4. Revise your storyboard with the feedback and with what you learned in Part E about where the pipeline breaks.
-
-\*\*\***Post your revised storyboard here.**\*\*\*
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/4e1d1e01-a622-4183-a329-b928eed7655d" />
 
 ## Part G. 
