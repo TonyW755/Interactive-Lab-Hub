@@ -344,9 +344,12 @@ When awake: The person checks the device’s screen. They learn one thing: “A 
 ## Part G. 
 ### Design the interaction before
 
-The hand-off: the person tells the device what to watch tonight, and the device acknowledges it. Keep it to a thirty-second ritual. A button or a touch (Lab 4), a spoken sentence (Lab 3), a wave or a Quiet Coyote at the camera (Part C). The acknowledgement can be a line on the display, a tone, or an LED that dims rather than lights up. At its simplest, the hand-off just sets the question that the morning will answer.
+Before bed I refresh the trap (fresh vinegar, a drop of soap, skim out anything floating) and hold a **quiet spider** over it: an open hand, all five fingers straight and spread wide, like a spider over its web. [`bedtime.py`](bug-counter/bedtime.py) watches for it with MediaPipe, from above:
 
-\*\*\***Describe the interaction before.**\*\*\*
+* A rule over the 21 hand landmarks: every finger straight (tip farther from the wrist than its middle joint), the thumb out, and every pair of neighbouring fingertips spread apart, all scaled by the size of the palm so it works at any height.
+* It has to be held for 1.5 seconds. That's Part E's lesson: one frame is a flicker, not a decision.
+* **Acknowledgement:** the Pi's green LED blinks three times slowly and then stays dark for the night, an LED that dims rather than lights up.
+* It then waits until no hand has been in view for 30 seconds before the first frame, so my hand (and the ripples) are never in the start-of-night reference the counter compares against.
 
 ## Part H. 
 [`capture.py`](bug-counter/capture.py) takes a 1280×720 frame every 5 seconds and logs each frame's brightness to `capture_log.jsonl`. It runs in `tmux`; the frames stay on the Pi and are not committed.
