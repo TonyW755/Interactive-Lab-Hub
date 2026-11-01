@@ -322,8 +322,11 @@ Stuck? A kitchen that tells you who raided the fridge. A desk that reports wheth
 Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf).
 
 \*\*\***Insert ideas, sketches, Verplank diagrams and storyboards for your night-time interaction here.**\*\*\*
+
 Before bed: The person taps “Start night watch” and goes to bed. A small light turns on, and the device displays “Watching” to acknowledge the handoff.
+
 While asleep: The device watches the bowl.If a fly enters, a detection box appears around it, and the event is saved.
+
 When awake: The person checks the device’s screen. They learn one thing: “A fly was detected overnight.” A saved image shows the fly boxed inside the bowl.
 <img width="1942" height="809" alt="image" src="https://github.com/user-attachments/assets/13ede518-8605-4f09-ad99-4f1a3d0014a9" />
 
