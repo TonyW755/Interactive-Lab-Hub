@@ -309,19 +309,6 @@ Two flavors, pick one or mix them:
 Two house rules. Sample rather than stream: one look every 5 to 30 seconds is plenty, and it keeps the Pi cool. And keep everything on the Pi: tell the people you live with, point the camera at things rather than at beds, and delete the snapshots after the demo.
 
 ## Part F. 
-### Read Part 2 and storyboard your night-time interaction
-
-Storyboard a night-time interaction built on your observant system, in three panels:
-
-1. **Before bed.** How does the person hand the night over, and how does the device acknowledge it?
-2. **While asleep.** What does the device watch or work through?
-3. **When awake.** What is the one thing the person learns, and in what medium?
-
-Stuck? A kitchen that tells you who raided the fridge. A desk that reports whether you actually went to bed. A window that names the quietest hour. A plant that describes its night. Find something better.
-
-Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf).
-
-\*\*\***Insert ideas, sketches, Verplank diagrams and storyboards for your night-time interaction here.**\*\*\*
 
 - **Before bed:** The user holds an open hand with all five fingers spread—the “quiet spider” gesture—over the trap. The Pi’s green LED blinks three times and then goes dark to acknowledge the hand-off.
 
@@ -331,6 +318,15 @@ Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/25
 <img width="1942" height="809" alt="image" src="https://github.com/user-attachments/assets/13ede518-8605-4f09-ad99-4f1a3d0014a9" />
 
 ## Prep for Part 2
+### Storyboard feedback — peer review
+
+- “Your initial storyboard explains the overall bedtime-to-morning sequence, but the fly’s arrival feels sudden. Could you show it flying into the scene, approaching the bowl, and then entering it? That would make the sequence easier to follow.”
+
+- “The wide view shows the equipment clearly, but I cannot tell what the camera is observing inside the bowl. A top-down close-up would help explain where detection happens.”
+
+- “The fly symbol on the screen tells me that something was detected, but it does not show which object the system identified. Adding a box around the fly would make the detection more explicit.”
+
+- “One detection does not explain what happens as the fly moves. Showing the detection box following the same fly across successive panels would communicate the tracking idea more clearly.”
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/4e1d1e01-a622-4183-a329-b928eed7655d" />
 
