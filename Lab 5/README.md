@@ -350,8 +350,7 @@ Before bed I refresh the trap (fresh vinegar, a drop of soap, skim out anything 
 | Recorded | 22:05 – 09:12, 7,806 frames, no gaps | 23:15 – 09:26, 7,152 frames |
 | Counter says | **1 caught, arrived 00:25** | **0 caught** |
 | In the dish in the morning | 1 fruit fly | none |
-| Result | <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/ecfbae86-102a-4b64-a8ed-d818c999d8b4" />| <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/87c8c1f3-75fd-4a77-9fba-ede994c98b73" />
- |
+| Result | <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/ecfbae86-102a-4b64-a8ed-d818c999d8b4" />| <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/87c8c1f3-75fd-4a77-9fba-ede994c98b73" />|
 
 Logs and counts: [night 1](https://github.com/mc3223/Peppers-Ghost/tree/Fall2026/Lab%205/bug-counter/results/night1), [night 2](https://github.com/mc3223/Peppers-Ghost/tree/Fall2026/Lab%205/bug-counter/results/night2).
 
