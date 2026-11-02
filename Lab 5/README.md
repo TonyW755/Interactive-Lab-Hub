@@ -356,7 +356,7 @@ Logs and counts: [night 1](https://github.com/mc3223/Peppers-Ghost/tree/Fall2026
 
 Night 1's fly landed at the edge of the liquid at 00:25, struggled for a few minutes, sat there for about four hours, then drifted to where I found it between 04:20 and 05:20.
 
-**How the counter works and how it got there.** Each fix came from checking the counter against what was actually in the frames and the dish:
+Each fix came from checking the counter against what was actually in the frames and the dish:
 
 1. **Find the liquid** in the first frame, so nothing on the dish counts. First by saturation (amber), then switched to **yellowness (Lab b\*)** after night 2: fresh vinegar was much paler and the lamp made the white dish look peachy, so "most saturated" picked the dish.
 2. **Find dark spots** with a black-hat filter, which compares each pixel to its neighbourhood, so dawn brightening the whole dish isn't a fly. Bright glare and a ring around it are skipped.
