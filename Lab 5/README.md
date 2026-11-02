@@ -323,11 +323,11 @@ Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/25
 
 \*\*\***Insert ideas, sketches, Verplank diagrams and storyboards for your night-time interaction here.**\*\*\*
 
-Before bed: The person taps “Start night watch” and goes to bed. A small light turns on, and the device displays “Watching” to acknowledge the handoff.
+- **Before bed:** The user holds an open hand with all five fingers spread—the “quiet spider” gesture—over the trap. The Pi’s green LED blinks three times and then goes dark to acknowledge the hand-off.
 
-While asleep: The device watches the bowl.If a fly enters, a detection box appears around it, and the event is saved.
+- **While asleep:** The camera watches the vinegar trap, capturing one image approximately every five seconds. The images stay on the Pi for processing. The storyboard above illustrates a fly approaching the bowl and being observed after entering it.
 
-When awake: The person checks the device’s screen. They learn one thing: “A fly was detected overnight.” A saved image shows the fly boxed inside the bowl.
+- **When awake:** The system processes the recorded images and presents a short morning report in the terminal. The user learns how many flies were caught and when they arrived, or receives a clear message that no flies were caught.
 <img width="1942" height="809" alt="image" src="https://github.com/user-attachments/assets/13ede518-8605-4f09-ad99-4f1a3d0014a9" />
 
 ## Prep for Part 2
@@ -375,26 +375,51 @@ Night 1's fly landed at the edge of the liquid at 00:25, struggled for a few min
 [Setup video](https://github.com/mc3223/Peppers-Ghost/blob/Fall2026/Lab%205/media/setup.mp4): the bowl on the table, the webcam clipped to a plant pot looking straight down at it, the Pi beside it, and a quiet spider over the trap at the end.
 
 ## Part I. 
-### Design the interaction after
+We use the custom `bug-counter/report.py` script. The image-processing pipeline calculates the counts and arrival times first. The script prints these facts, then asks Qwen to turn them into a brief morning report. Qwen does not decide whether a fly was caught.
 
-[`report.py`](bug-counter/report.py) runs the counter, then hands Qwen **only the finished numbers** and asks for three sentences. Part D showed the model invents facts and Part E showed it turns a jittery log into "14 people", so it never decides whether there was a fly. The facts line is printed above the report so the two can be compared, and a night with no catches gets a plain sentence without asking the model at all.
+This design follows our experience in Part E: the language model could misinterpret detection logs, so its role is limited to summarising the finished measurements.
 
-**Night 2 (quiet night, no model):**
-```
+### A night with no catches
+
+For Night 2, the program uses a fixed message without calling Qwen. The output recorded in our teammate's write-up was:
+
+```text
 Watched 23:15-09:26. Caught 0. Already in the trap at bedtime: 0. Lamp off: 0 min. Daylight from 07:04.
 
 Quiet night: the trap watched from 23:15 to 09:26 and caught no flies.
 ```
 
-**Night 1:**
-> **TODO (Max): on the Pi, `cd bug-counter/night1 && ../../.venv/bin/python ../report.py`, and paste the output.**
-
+This gives the user a clear result even when nothing was caught. If the lamp was off, the script adds a warning that some activity may have been missed.
 
 ## Final documentation
 
-* **Looks like:** [setup video](https://github.com/mc3223/Peppers-Ghost/blob/Fall2026/Lab%205/media/setup.mp4), and the trap from the camera's view in the Part H table.
-* **Works like:** frame every 5 s → liquid mask + dark-spot detector → tracker (catch / visit / already there / unsure) → `count_result.json` → Qwen → three sentences. Two real nights above.
-* **Acts like:** quiet spider and a blinking LED before bed; a count you can check against the dish in the morning.
+### Looks like
+
+Our device is a vinegar fly trap monitored by a webcam connected to a Raspberry Pi. The camera is positioned above the bowl, with a lamp providing overnight illumination. Its view is focused on the trap rather than on people.
+
+[Watch the setup and bedtime gesture video](./setup%202.mp4)
+
+### Works like
+
+The system captures an image approximately every five seconds and saves a timestamped brightness log. In the morning, the counter identifies dark spots within the liquid and tracks them over time. Persistent candidates are counted separately from brief visits, objects already present at bedtime, and uncertain detections after daylight.
+
+The resulting counts and arrival times are passed to Qwen for a short morning summary. A night with no catches receives a fixed message instead.
+
+Two overnight recordings produced one reported catch on October 21–22 and zero on October 22–23, matching our teammate's morning inspections.
+
+[View the implementation and overnight results](https://github.com/mc3223/Peppers-Ghost/tree/Fall2026/Lab%205/bug-counter)
+
+### Acts like
+
+Before bed, the user performs the “quiet spider” gesture above the trap. The designed acknowledgement is three green LED blinks followed by darkness. After the hand leaves and the liquid settles, overnight recording begins.
+
+In the morning, the user reads the confirmed count and arrival times in the terminal and can inspect the annotated image alongside the physical trap.
+
+### Prototypes and iterations
+
+The reconstructed initial storyboard presents a simple setup–observation–message sequence. The revised storyboard expands the fly's approach, entry into the bowl, detection, and tracking.
+
+Testing also led to changes in the liquid mask, tolerance for interrupted tracks, and handling of daylight reflections. Part E informed the decision to calculate counts before asking Qwen to summarise them.
 
 
 ## Deliverables & Submission for Lab 5
