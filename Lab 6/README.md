@@ -4,8 +4,8 @@
  
 Three players, three Raspberry Pis, one shared screen, and a 3-minute dinner rush. The **Runner** can move food but can't cook it. The **Chopper** and the **Cook** can prepare food but can't move it. The only way to serve an order is to talk to each other.
  
-![The shared screen mid-round](imgs/orderup-busy-kitchen.png)
- 
+<img width="1600" height="900" alt="orderup-busy-kitchen" src="https://github.com/user-attachments/assets/0a6634a0-b329-429f-9f2f-0feac2945c41" />
+
 *The shared screen in the middle of a busy round: four tickets, a full counter, a chop waiting for space and a patty about to burn.*
  
 ---
