@@ -2,7 +2,7 @@
  
 **Team:** NAME 1, NAME 2, NAME 3 <!-- TODO: our names -->
  
-Our project is **Order Up!**, a co-op cooking game for three players on three Raspberry Pis. It's all in [`order-up/`](order-up/), and the original plan is in [`GAME_PLAN.md`](GAME_PLAN.md).
+Our project is **Order Up!**, a co-op cooking game for three players on three Raspberry Pis.
  
 ---
  
@@ -140,14 +140,17 @@ Scrolling through menus never touches the network. Only the confirmed action get
  
 **Screens**
  
-| Lobby | Mid-round |
-| --- | --- |
-| <img width="1600" height="900" alt="orderup-lobby" src="https://github.com/user-attachments/assets/c7b86b3e-82d1-404b-b837-072da8c9a4e6" />
-| <img width="1600" height="900" alt="orderup-mid-round" src="https://github.com/user-attachments/assets/2040cd1d-e6f2-478f-b92b-2bf36b41cb83" />
- |
-| **Game over** | **All the Pi screens** |
-| <img width="1600" height="900" alt="orderup-game-over" src="https://github.com/user-attachments/assets/ff80557a-0f2f-4bbe-8bb9-d8447d27b8d8" />
- | <img width="2040" height="1336" alt="orderup-pi-screens" src="https://github.com/user-attachments/assets/bb75593b-5d2e-4474-80b9-e35bbae2af14" /> |
+**Lobby**
+ <img width="1600" height="900" alt="orderup-lobby" src="https://github.com/user-attachments/assets/c7b86b3e-82d1-404b-b837-072da8c9a4e6" />
+
+**Mis-Round**
+<img width="1600" height="900" alt="orderup-mid-round" src="https://github.com/user-attachments/assets/2040cd1d-e6f2-478f-b92b-2bf36b41cb83" />
+ 
+**Game over** 
+<img width="1600" height="900" alt="orderup-game-over" src="https://github.com/user-attachments/assets/ff80557a-0f2f-4bbe-8bb9-d8447d27b8d8" />
+
+**Pi-screens**
+ <img width="2040" height="1336" alt="orderup-pi-screens" src="https://github.com/user-attachments/assets/bb75593b-5d2e-4474-80b9-e35bbae2af14" /> 
  
 _These screenshots came from our test runs, before we played with the real hardware._
  
