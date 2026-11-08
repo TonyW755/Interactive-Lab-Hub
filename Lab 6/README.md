@@ -143,7 +143,7 @@ Scrolling through menus never touches the network. Only the confirmed action get
 **Lobby**
  <img width="1600" height="900" alt="orderup-lobby" src="https://github.com/user-attachments/assets/c7b86b3e-82d1-404b-b837-072da8c9a4e6" />
 
-**Mis-Round**
+**Mid-Round**
 <img width="1600" height="900" alt="orderup-mid-round" src="https://github.com/user-attachments/assets/2040cd1d-e6f2-478f-b92b-2bf36b41cb83" />
  
 **Game over** 
