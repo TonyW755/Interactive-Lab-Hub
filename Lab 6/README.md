@@ -53,6 +53,8 @@ Holding red, green and blue objects over the sensor changed my pixel within abou
 
 <!-- IMAGE: photo of my Pi with the sensor connected -->
 
+<img width="5712" height="4284" alt="partB-pi-setup" src="https://github.com/user-attachments/assets/3b365efb-4f1e-4912-a89f-ec69e1bdca47" />
+
 
 
 
