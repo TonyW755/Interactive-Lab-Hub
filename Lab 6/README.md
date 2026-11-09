@@ -1,6 +1,6 @@
 # Distributed Interaction
  
-**Team:** NAME 1, NAME 2, NAME 3 <!-- TODO: our names -->
+**Team:** Yuxuan Wang（yw2946), Xie Li(xl2323), Matthias Corkran（mc3223, Rohil Saraf
  
 Our project is **Order Up!**, a co-op cooking game for three players on three Raspberry Pis.
  
