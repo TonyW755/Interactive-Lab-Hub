@@ -16,7 +16,7 @@ I installed `mosquitto-clients` on my Pi and tested publish/subscribe with the c
 The message showed up in the subscriber terminal right away and in the web debug viewer at `http://farlab.infosci.cornell.edu:5001`.
 
 <!-- IMAGE: terminal showing "Hello!" received -->
-![MQTT pub/sub test in terminal](imgs/partA-terminal.png)
+<img width="2280" height="860" alt="image" src="https://github.com/user-attachments/assets/d805dd73-a3c1-463c-9e0f-588d13799489" />
 
 <!-- IMAGE: MQTT viewer on :5001 showing IDD/test/rohil -->
 ![MQTT viewer showing my message](imgs/partA-viewer.png)
