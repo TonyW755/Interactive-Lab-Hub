@@ -19,7 +19,8 @@ The message showed up in the subscriber terminal right away and in the web debug
 <img width="2280" height="860" alt="image" src="https://github.com/user-attachments/assets/d805dd73-a3c1-463c-9e0f-588d13799489" />
 
 <!-- IMAGE: MQTT viewer on :5001 showing IDD/test/rohil -->
-![MQTT viewer showing my message](imgs/partA-viewer.png)
+<img width="1994" height="620" alt="image" src="https://github.com/user-attachments/assets/625d8754-c714-4172-9f92-6009d3532131" />
+
 
 ### 5 Ideas for Messaging Between Devices
 
@@ -47,10 +48,13 @@ Each Pi acts as one pixel on a shared web grid. The APDS-9960 sensor reads the c
 Holding red, green and blue objects over the sensor changed my pixel within about a second.
 
 <!-- IMAGE: screenshot of the pixel grid with my pixel -->
-![Pixel grid](imgs/partB-grid.png)
+<img width="1826" height="1196" alt="image" src="https://github.com/user-attachments/assets/a7bf7f77-57c6-48e2-9208-0730cc324e3f" />
+
 
 <!-- IMAGE: photo of my Pi with the sensor connected -->
-![My Pi setup with APDS-9960](imgs/partB-pi-setup.jpeg)
+
+
+
 
 ---
 
