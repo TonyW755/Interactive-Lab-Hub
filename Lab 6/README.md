@@ -7,21 +7,53 @@ Our project is **Order Up!**, a co-op cooking game for three players on three Ra
 ---
  
 ## Part A: MQTT Messaging
- 
-**Brainstorm: 5 ideas for messaging between devices**
- 
-<!-- TODO: our five ideas. Order Up! came out of this list. -->
-1. _TODO_
-2. _TODO_
-3. _TODO_
-4. _TODO_
-5. _TODO_
+
+I installed `mosquitto-clients` on my Pi and tested publish/subscribe with the class broker at `farlab.infosci.cornell.edu:1883`.
+
+- **Subscriber:** listened on `IDD/#` (the `#` wildcard catches every topic under `IDD/`)
+- **Publisher:** sent `Hello!` on `IDD/test/rohil`
+
+The message showed up in the subscriber terminal right away and in the web debug viewer at `http://farlab.infosci.cornell.edu:5001`.
+
+<!-- IMAGE: terminal showing "Hello!" received -->
+![MQTT pub/sub test in terminal](imgs/partA-terminal.png)
+
+<!-- IMAGE: MQTT viewer on :5001 showing IDD/test/rohil -->
+![MQTT viewer showing my message](imgs/partA-viewer.png)
+
+### 5 Ideas for Messaging Between Devices
+
+1. **Remote doorbell.** A proximity sensor at the door publishes `IDD/home/door/visitor`, and a Pi in another room flashes its screen.
+2. **"At my desk" presence light.** Each roommate's Pi publishes whether someone is sitting nearby, and everyone sees who's home on a shared display.
+3. **Plant check-in.** A moisture or light sensor next to a plant publishes readings, and a friend's Pi shows a sad face when the plant needs attention.
+4. **Long-distance high five.** Waving at your Pi (gesture sensor) lights up a friend's Pi somewhere else, and they wave back.
+5. **Co-op cooking game (Order Up!).** Three Pis each do one job (joystick, knife, pan) and send events to a shared screen, so the team has to talk to finish orders. This is the idea we built for Part C.
+
+**On topic design:** MQTT doesn't fix any vocabulary in advance. We had to invent our own topic names and message formats, while a standard like Matter defines what a "light" or "sensor" means for you. That made our system easy to start but meant we had to agree on topics as a team (see Part C).
+
+---
+
 ## Part B: Collaborative Pixel Grid
- 
-_TODO: screenshot of the grid + photo of our Pi setup._
- 
-<!-- ![Pixel grid](imgs/our-pixel-grid.png)  ![Our Pi](imgs/our-pi-setup.jpg) -->
- 
+
+Each Pi acts as one pixel on a shared web grid. The APDS-9960 sensor reads the color of whatever is held near it, the Pi publishes that color over MQTT, and the server updates the grid in the browser in real time.
+
+**Architecture:** `Pi (APDS-9960 color sensor) → MQTT broker → Server → Web browser grid`
+
+**Setup:**
+- Connected the APDS-9960 with a Qwiic cable and confirmed it at address `0x39` with `i2cdetect -y 1`
+- Ran `pixel_grid_publisher.py` on the Pi
+- Viewed the grid at `http://farlab.infosci.cornell.edu:5000`
+
+Holding red, green and blue objects over the sensor changed my pixel within about a second.
+
+<!-- IMAGE: screenshot of the pixel grid with my pixel -->
+![Pixel grid](imgs/partB-grid.png)
+
+<!-- IMAGE: photo of my Pi with the sensor connected -->
+![My Pi setup with APDS-9960](imgs/partB-pi-setup.jpeg)
+
+---
+
 ---
  
 ## Part C: Order Up!
