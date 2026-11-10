@@ -1,0 +1,58 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Server (class broker)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/server/app.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Server (local broker)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/server/app.py",
+      "args": ["--broker", "localhost"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Simulator: all stations",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/sim/sim_station.py",
+      "args": ["all"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Simulator: one station",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/sim/sim_station.py",
+      "args": ["${input:station}"],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Pi: run a station",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/pi/${input:station}_station.py",
+      "console": "integratedTerminal"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "station",
+      "type": "pickString",
+      "description": "Which station?",
+      "options": ["runner", "chop", "cook"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Server + simulator",
+      "configurations": ["Server (class broker)", "Simulator: all stations"],
+      "stopAll": true
+    }
+  ]
+}

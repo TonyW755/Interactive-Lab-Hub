@@ -1,0 +1,11 @@
+# Laptop: game server, shared screen, simulator and tests
+#   pip install -r requirements-server.txt
+
+paho-mqtt<2.0
+Flask>=3.0.0
+Flask-SocketIO>=5.3.5
+simple-websocket>=1.0      # real WebSockets in Socket.IO's threading mode
+pytest>=7
+
+# sim/sim_station.py uses curses, which Windows doesn't ship with
+windows-curses; sys_platform == "win32"

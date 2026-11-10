@@ -1,0 +1,32 @@
+# Pi stations. From the order-up folder:
+#   pip install -r requirements-pi.txt
+# Self-contained, so it works from the zip without the rest of the repo.
+
+# Raspberry Pi hardware libraries (same as the Lab 6 Pi example)
+Adafruit-Blinka>=8.67.0
+adafruit-circuitpython-busdevice>=5.2.6
+adafruit-circuitpython-register>=1.9.17
+adafruit-circuitpython-rgb-display>=3.12.0   # Mini PiTFT
+Adafruit-PlatformDetect>=3.84.1
+Adafruit-PureIO>=1.1.11
+RPi.GPIO>=0.7.1
+rpi-ws281x>=5.0.0
+pyftdi>=0.52.9
+pyserial>=3.5
+pyusb>=1.2.1
+sysv-ipc>=1.1.0
+lgpio>=0.2.2.0
+gpiod>=2.2.2,<3
+Adafruit-Blinka-Raspberry-Pi-PWM>=1.0.2
+Adafruit-Blinka-Raspberry-Pi5-Neopixel
+
+# Our sensors and actuators
+adafruit-circuitpython-lsm6ds     # Chop: IMU in the knife
+adafruit-circuitpython-seesaw     # Cook: rotary encoder, its button and LED
+sparkfun-pi-servo-hat             # Cook: heat needle
+sparkfun-qwiic-joystick           # Runner
+
+# MQTT and drawing
+paho-mqtt<2.0
+Pillow>=10.0.0
+numpy                             # makes pushing frames to the PiTFT much faster
