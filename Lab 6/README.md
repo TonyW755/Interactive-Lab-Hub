@@ -164,20 +164,6 @@ Scrolling through menus never touches the network. Only the confirmed action get
  
 ### 3. Build Documentation
  
-**Photos of each Pi + sensors**
- 
-| Station | Photo |
-| --- | --- |
-| Chop Pi + knife | <img width="1012" height="614" alt="image" src="https://github.com/user-attachments/assets/e64a893d-ec4c-4afb-95cb-3742150e7d49" />
- |
-| Cook Pi + pan + needle | <img width="720" height="804" alt="image" src="https://github.com/user-attachments/assets/4091d451-e3a9-42d0-b8e4-d07b305994f9" />
- |
-| Runner Pi + joystick |<img width="866" height="1006" alt="image" src="https://github.com/user-attachments/assets/02731be0-9ad6-4118-b83a-6269755c7ad7" />
- |
- 
-<!-- ![Chop Pi](imgs/chop-pi.jpg) -->
- 
-**Screens**
  
 **Lobby**
  <img width="1600" height="900" alt="orderup-lobby" src="https://github.com/user-attachments/assets/c7b86b3e-82d1-404b-b837-072da8c9a4e6" />
