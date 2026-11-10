@@ -178,6 +178,8 @@ Scrolling through menus never touches the network. Only the confirmed action get
  <img width="2040" height="1336" alt="orderup-pi-screens" src="https://github.com/user-attachments/assets/bb75593b-5d2e-4474-80b9-e35bbae2af14" /> 
  
 _These screenshots came from our test runs, before we played with the real hardware._
+
+The entire demo run is recorded in the following page [oder-up-demo](https://github.com/TonyW755/Interactive-Lab-Hub/blob/Fall2026/Lab%206/order-up-demo.mp4)
  
 **MQTT topics used**
  
