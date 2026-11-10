@@ -16,10 +16,12 @@ I installed `mosquitto-clients` on my Pi and tested publish/subscribe with the c
 The message showed up in the subscriber terminal right away and in the web debug viewer at `http://farlab.infosci.cornell.edu:5001`.
 
 <!-- IMAGE: terminal showing "Hello!" received -->
-![MQTT pub/sub test in terminal](imgs/partA-terminal.png)
+<img width="2280" height="860" alt="image" src="https://github.com/user-attachments/assets/8720290d-534b-4455-aadd-0f162bbdcd62" />
+
 
 <!-- IMAGE: MQTT viewer on :5001 showing IDD/test/rohil -->
-![MQTT viewer showing my message](imgs/partA-viewer.png)
+<img width="1994" height="620" alt="image" src="https://github.com/user-attachments/assets/8ddf5c4e-2418-40a1-b4d8-c8d528467869" />
+
 
 ### 5 Ideas for Messaging Between Devices
 
@@ -47,10 +49,13 @@ Each Pi acts as one pixel on a shared web grid. The APDS-9960 sensor reads the c
 Holding red, green and blue objects over the sensor changed my pixel within about a second.
 
 <!-- IMAGE: screenshot of the pixel grid with my pixel -->
-![Pixel grid](imgs/partB-grid.png)
+<img width="1826" height="1196" alt="image" src="https://github.com/user-attachments/assets/fc729d89-61c3-4c3f-ae3c-8f08790b6bd0" />
+
 
 <!-- IMAGE: photo of my Pi with the sensor connected -->
-![My Pi setup with APDS-9960](imgs/partB-pi-setup.jpeg)
+
+
+
 
 ---
 
@@ -163,9 +168,12 @@ Scrolling through menus never touches the network. Only the confirmed action get
  
 | Station | Photo |
 | --- | --- |
-| Chop Pi + knife | ![Chop Pi](imgs/chop-pi.png) |
-| Cook Pi + pan + needle | ![Cook Pi](imgs/cook-pi.png) |
-| Runner Pi + joystick | ![Runner Pi](imgs/runner-pi.png) |
+| Chop Pi + knife | <img width="1012" height="614" alt="image" src="https://github.com/user-attachments/assets/e64a893d-ec4c-4afb-95cb-3742150e7d49" />
+ |
+| Cook Pi + pan + needle | <img width="720" height="804" alt="image" src="https://github.com/user-attachments/assets/4091d451-e3a9-42d0-b8e4-d07b305994f9" />
+ |
+| Runner Pi + joystick |<img width="866" height="1006" alt="image" src="https://github.com/user-attachments/assets/02731be0-9ad6-4118-b83a-6269755c7ad7" />
+ |
  
 <!-- ![Chop Pi](imgs/chop-pi.jpg) -->
  
