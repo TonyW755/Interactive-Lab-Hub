@@ -62,6 +62,22 @@ Holding red, green and blue objects over the sensor changed my pixel within abou
 ---
 
 ## Part C: Order Up!
+
+### Design Iteration: From a Web Prototype to a Cooking Game
+
+Our initial idea for **Order Up!** was inspired by *Overcooked*: a cooperative cooking game where players communicate and work together to complete orders under time pressure. We adapted that idea into three separate physical roles—the Runner, Chopper, and Cook—so each player would contribute a different action through their Raspberry Pi.
+
+Our first web prototype focused on making the game’s information clear. It displayed order tickets, required ingredients, countdowns, counter spaces, station progress, and the team’s score. This gave us a starting point for showing what was happening across the kitchen.
+<img width="942" height="912" alt="image" src="https://github.com/user-attachments/assets/7b0b8634-e760-471d-9b2a-79c07ed6057b" />
+
+
+*Our first web phase: a layout built around text, order cards, and progress indicators.*
+
+Although this version organized the information clearly, we felt it looked more like a dashboard than a cooking game. Players had to read labels to understand the ingredients and station activity. We wanted the shared screen to feel more playful and make the kitchen easier to understand at a glance.
+
+For the next iteration, we wanted to add pictures of ingredients, prepared dishes, and kitchen stations. These visuals would help players recognize what they were handling and connect their physical chopping and stirring actions to what appeared on screen. Our goal was to preserve the first prototype’s clear layout while making the experience feel more like the cooperative cooking game we originally imagined.
+
+
  <img width="1600" height="900" alt="orderup-busy-kitchen" src="https://github.com/user-attachments/assets/a08d3699-0e6b-4404-84d0-4cfb5e58ebea" />
 
  
